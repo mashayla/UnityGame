@@ -4,61 +4,45 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    Rigidbody rb;
-    float movementSpeed = 5;
+    [Header("Movement")]
+    public float moveSpeed;
 
-    // Start is called before the first frame update
-    void Start()
+    [Header("Ground Check")]
+
+    public Transform orientation;
+    float horizontalInput;
+    float verticalInput;
+
+    Vector3 moveDirection;
+
+    Rigidbody rb;
+
+    private void Start()
     {
-        Debug.Log("Hello from Start");
         rb = GetComponent<Rigidbody>();
+        rb.freezeRotation = true;
+    }
+    private void Update()
+    {
+        MyInput();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void FixedUpdate()
     {
-        float horizontalInput = Input.GetAxis("Horizontal");
-        float verticalInput = Input.GetAxis("Vertical");
-        //move object
-        transform.Translate(Vector3.forward * Time.deltaTime * verticalInput);
-        transform.Translate(Vector3.right * Time.deltaTime * horizontalInput);
+        MovePlayer();
+    }
 
-        //rb.velocity = new Vector3(horizontalInput * movementSpeed, rb.velocity.y, verticalInput * movementSpeed);
+    private void MyInput()
+    {
+        horizontalInput = Input.GetAxisRaw("Horizontal");
+        verticalInput = Input.GetAxisRaw("Vertical");
+    }
 
-        // Calculate movement direction based on input
-        //  Vector3 moveDirection = new Vector3(horizontalInput, 0, verticalInput);
+    private void MovePlayer()
+    {
+        //calculate movement direction
+        moveDirection = orientation.forward * verticalInput + orientation.right * horizontalInput;
 
-        // Apply movement velocity
-        // rb.velocity = moveDirection * movementSpeed;
-
-        // Get input for movement along each axis
-
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            rb.velocity = new Vector3(rb.velocity.x, movementSpeed, rb.velocity.z);
-        }
-        //BELOW IS HARDCODED METHOD FOR PLAYER MOVEMENT
-        //if (Input.GetKeyDown("space"))
-        //{
-          //  to jump, change the y axis position to have the player go up
-        //    rb.velocity = new Vector3(rb.velocity.x, 5, rb.velocity.z);
-        //}
-     //   Movement around floor
-        //if (Input.GetKey("w"))
-        //{
-        //    rb.velocity = new Vector3(0, 0, 5);
-        //}
-        //if (Input.GetKey("d"))
-        //{
-        //    rb.velocity = new Vector3(5, 0, 0);
-        //}
-        //if (Input.GetKey("s"))
-        //{
-        //    rb.velocity = new Vector3(0, 0, -5);
-        //}
-        //if (Input.GetKey("a"))
-        //{
-        //    GetComponent<Rigidbody>().velocity = new Vector3(-5, 0, 0);
-        //}
+        rb.AddForce(moveDirection.normalized * moveSpeed * 10f, ForceMode.Force);
     }
 }
