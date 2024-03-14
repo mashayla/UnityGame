@@ -5,14 +5,14 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     Animator animator;
-    Rigidbody rb;
+   // Rigidbody rb;
     public float moveSpeed = 5f; // Adjust this value to control the movement speed
 
     // Start is called before the first frame update
     void Start()
     {
         animator = GetComponent<Animator>();
-        rb = GetComponent<Rigidbody>();
+      //  rb = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame

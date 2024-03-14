@@ -26,7 +26,11 @@ public class Camer : MonoBehaviour
 
         yRotation += mouseX;
         xRotation -= mouseY;
+
+        //prevents you from looking to far up or too far down
         xRotation = Mathf.Clamp(xRotation, -90f, 90f);
+        //prevetns you from looking to far left or right
+        yRotation = Mathf.Clamp(yRotation, -90f, 90f);
 
         //Rotate camera and Orientation
         transform.rotation = Quaternion.Euler(xRotation, yRotation, 0);
