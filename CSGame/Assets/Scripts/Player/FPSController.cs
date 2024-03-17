@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 [RequireComponent(typeof(CharacterController))]
@@ -10,6 +11,9 @@ public class FPSController : MonoBehaviour
     public float runSpeed = 12f;
     public float jumpPower = 7f;
     public float gravity = 10f;
+
+    [SerializeField]
+    private StatusController theStatusController;
 
 
     public float lookSpeed = 2f;
@@ -28,6 +32,7 @@ public class FPSController : MonoBehaviour
         characterController = GetComponent<CharacterController>();
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+        theStatusController = FindObjectOfType<StatusController>();
     }
 
     void Update()
@@ -39,17 +44,28 @@ public class FPSController : MonoBehaviour
 
         // Press Left Shift to run
         bool isRunning = Input.GetKey(KeyCode.LeftShift);
+        if (theStatusController.getCurrentSP() <= 0)
+        {
+            isRunning = false;
+        }
+
         float curSpeedX = canMove ? (isRunning ? runSpeed : walkSpeed) * Input.GetAxis("Vertical") : 0;
         float curSpeedY = canMove ? (isRunning ? runSpeed : walkSpeed) * Input.GetAxis("Horizontal") : 0;
         float movementDirectionY = moveDirection.y;
         moveDirection = (forward * curSpeedX) + (right * curSpeedY);
 
+        if (isRunning)
+        {
+            theStatusController.DecreaseStamina(10);
+        }
+
         #endregion
 
         #region Handles Jumping
-        if (Input.GetButton("Jump") && canMove && characterController.isGrounded)
+        if (Input.GetButton("Jump") && canMove && characterController.isGrounded && theStatusController.getCurrentSP() > 0)
         {
             moveDirection.y = jumpPower;
+            theStatusController.DecreaseStamina(50);
         }
         else
         {
