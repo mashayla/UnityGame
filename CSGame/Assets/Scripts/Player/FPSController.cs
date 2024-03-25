@@ -19,7 +19,6 @@ public class FPSController : MonoBehaviour
     public float lookSpeed = 2f;
     public float lookXLimit = 45f;
 
-
     Vector3 moveDirection = Vector3.zero;
     float rotationX = 0;
 
@@ -27,6 +26,22 @@ public class FPSController : MonoBehaviour
 
 
     CharacterController characterController;
+    //Leslie added code:
+    public static FPSController instance; // Static instance property
+
+    void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else if (instance != this)
+        {
+            Destroy(gameObject); // Destroy duplicate instances
+        }
+    }
+    ///leslie added code^
+    ///
     void Start()
     {
         characterController = GetComponent<CharacterController>();
