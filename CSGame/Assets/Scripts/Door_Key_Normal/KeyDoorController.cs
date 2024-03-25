@@ -47,4 +47,14 @@ public class KeyDoorController : MonoBehaviour
             Debug.Log("Key picked up. Door can now be unlocked.");
         }
     }
+
+    
+    public void ToggleDoor()
+    {
+        // Check if the door is unlocked and the player is within the unlock distance
+        if (!isLocked && Vector3.Distance(transform.position, player.position) <= unlockDistance)
+        {
+            isLocked = !isLocked; // Toggle the lock state
+        }
+    }
 }
