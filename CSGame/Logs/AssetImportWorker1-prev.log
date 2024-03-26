@@ -9,7 +9,7 @@ Running under Rosetta:   NO
 Available memory:        8192 MB
 Using pre-set license
 Pro License: YES
-2024-03-25 19:25:09.929 Unity[3254:78341] WARNING: Secure coding is not enabled for restorable state! Enable secure coding by implementing NSApplicationDelegate.applicationSupportsSecureRestorableState: and returning YES.
+2024-03-25 21:06:20.204 Unity[5222:141597] WARNING: Secure coding is not enabled for restorable state! Enable secure coding by implementing NSApplicationDelegate.applicationSupportsSecureRestorableState: and returning YES.
 
 COMMAND LINE ARGUMENTS:
 /Applications/Unity/Hub/Editor/2023.2.10f1/Unity.app/Contents/MacOS/Unity
@@ -23,7 +23,7 @@ AssetImportWorker1
 -logFile
 Logs/AssetImportWorker1.log
 -srvPort
-50492
+51516
 -job-worker-count
 1
 -background-job-worker-count
@@ -66,12 +66,12 @@ Successfully changed project path to: /Users/mashaylab/Desktop/MyGithub/UnityGam
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [140704368275712] Host "[IP] 192.168.1.7 [Port] 0 [Flags] 2 [Guid] 2631715207 [EditorId] 2631715207 [Version] 1048832 [Id] OSXEditor(0,Mashaylas-MacBook-Air.local) [Debug] 1 [PackageName] OSXEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
-Player connection [140704368275712] Host "[IP] 192.168.1.7 [Port] 0 [Flags] 2 [Guid] 2631715207 [EditorId] 2631715207 [Version] 1048832 [Id] OSXEditor(0,Mashaylas-MacBook-Air.local) [Debug] 1 [PackageName] OSXEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [140704368275712] Host "[IP] 192.168.1.7 [Port] 0 [Flags] 2 [Guid] 3956140320 [EditorId] 3956140320 [Version] 1048832 [Id] OSXEditor(0,Mashaylas-Air) [Debug] 1 [PackageName] OSXEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+Player connection [140704368275712] Host "[IP] 192.168.1.7 [Port] 0 [Flags] 2 [Guid] 3956140320 [EditorId] 3956140320 [Version] 1048832 [Id] OSXEditor(0,Mashaylas-Air) [Debug] 1 [PackageName] OSXEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
 JobSystem: Creating JobQueue using job-worker-count value 1
 [Physics::Module] Initialized MultithreadedJobDispatcher with 1 workers.
 Library Redirect Path: Library/
-Refreshing native plugins compatible for Editor in 1.75 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 4.48 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2023.2.10f1 (316c1fd686f6)
 [Subsystems] Discovering subsystems at path /Applications/Unity/Hub/Editor/2023.2.10f1/Unity.app/Contents/Resources/UnitySubsystems
@@ -86,7 +86,7 @@ Initialize mono
 Mono path[0] = '/Applications/Unity/Hub/Editor/2023.2.10f1/Unity.app/Contents/Managed'
 Mono path[1] = '/Applications/Unity/Hub/Editor/2023.2.10f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/unityjit-macos'
 Mono config path = '/Applications/Unity/Hub/Editor/2023.2.10f1/Unity.app/Contents/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56254
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56222
 Begin MonoManager ReloadAssembly
 icall.c:1842:
 icall.c:1842:
@@ -100,41 +100,41 @@ icall.c:1842:
 icall.c:1842:
 Registering precompiled unity dll's ...
 Register platform support module: /Applications/Unity/Hub/Editor/2023.2.10f1/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll
-Registered in 0.002412 seconds.
-- Loaded All Assemblies, in  1.048 seconds
+Registered in 0.004616 seconds.
+- Loaded All Assemblies, in  1.316 seconds
 Native extension for OSXStandalone target not found
 Mono: successfully reloaded assembly
 icall.c:1842:
 icall.c:1842:
-- Finished resetting the current domain, in  0.984 seconds
-Domain Reload Profiling: 2032ms
-	BeginReloadAssembly (225ms)
+- Finished resetting the current domain, in  0.964 seconds
+Domain Reload Profiling: 2280ms
+	BeginReloadAssembly (414ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (0ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (1ms)
-	RebuildCommonClasses (185ms)
-	RebuildNativeTypeToScriptingClass (44ms)
-	initialDomainReloadingComplete (135ms)
-	LoadAllAssembliesAndSetupDomain (457ms)
-		LoadAssemblies (224ms)
+		CreateAndSetChildDomain (2ms)
+	RebuildCommonClasses (160ms)
+	RebuildNativeTypeToScriptingClass (42ms)
+	initialDomainReloadingComplete (155ms)
+	LoadAllAssembliesAndSetupDomain (544ms)
+		LoadAssemblies (413ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (451ms)
-			TypeCache.Refresh (446ms)
-				TypeCache.ScanAssembly (411ms)
-			BuildScriptInfoCaches (0ms)
-			ResolveRequiredComponents (1ms)
-	FinalizeReload (985ms)
+		AnalyzeDomain (538ms)
+			TypeCache.Refresh (531ms)
+				TypeCache.ScanAssembly (492ms)
+			BuildScriptInfoCaches (1ms)
+			ResolveRequiredComponents (2ms)
+	FinalizeReload (965ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (802ms)
+		SetupLoadedEditorAssemblies (799ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (68ms)
-			SetLoadedEditorAssemblies (14ms)
-			BeforeProcessingInitializeOnLoad (15ms)
-			ProcessInitializeOnLoadAttributes (531ms)
-			ProcessInitializeOnLoadMethodAttributes (173ms)
+			InitializePlatformSupportModulesInManaged (82ms)
+			SetLoadedEditorAssemblies (18ms)
+			BeforeProcessingInitializeOnLoad (21ms)
+			ProcessInitializeOnLoadAttributes (535ms)
+			ProcessInitializeOnLoadMethodAttributes (142ms)
 			AfterProcessingInitializeOnLoad (0ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
@@ -157,164 +157,57 @@ icall.c:1842:
 icall.c:1842:
 Symbol file LoadedFromMemory doesn't match image /Users/mashaylab/Desktop/MyGithub/UnityGame/CSGame/Library/PackageCache/com.unity.visualscripting@1.8.0/Editor/VisualScripting.Core/Dependencies/YamlDotNet/Unity.VisualScripting.YamlDotNet.dll
 Symbol file LoadedFromMemory doesn't match image /Users/mashaylab/Desktop/MyGithub/UnityGame/CSGame/Library/PackageCache/com.unity.visualscripting@1.8.0/Editor/VisualScripting.Core/Dependencies/DotNetZip/Unity.VisualScripting.IonicZip.dll
-- Loaded All Assemblies, in  2.771 seconds
-Refreshing native plugins compatible for Editor in 0.63 ms, found 2 plugins.
+- Loaded All Assemblies, in  3.626 seconds
+Refreshing native plugins compatible for Editor in 1.02 ms, found 2 plugins.
 Native extension for OSXStandalone target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  2.086 seconds
-Domain Reload Profiling: 4857ms
-	BeginReloadAssembly (1193ms)
+- Finished resetting the current domain, in  3.146 seconds
+Domain Reload Profiling: 6772ms
+	BeginReloadAssembly (1159ms)
 		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (26ms)
+		DisableScriptedObjects (20ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (214ms)
-	RebuildCommonClasses (173ms)
-	RebuildNativeTypeToScriptingClass (56ms)
-	initialDomainReloadingComplete (144ms)
-	LoadAllAssembliesAndSetupDomain (1205ms)
-		LoadAssemblies (938ms)
+		CreateAndSetChildDomain (182ms)
+	RebuildCommonClasses (166ms)
+	RebuildNativeTypeToScriptingClass (59ms)
+	initialDomainReloadingComplete (137ms)
+	LoadAllAssembliesAndSetupDomain (2103ms)
+		LoadAssemblies (1543ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (516ms)
-			TypeCache.Refresh (448ms)
-				TypeCache.ScanAssembly (411ms)
-			BuildScriptInfoCaches (49ms)
-			ResolveRequiredComponents (11ms)
-	FinalizeReload (2086ms)
+		AnalyzeDomain (822ms)
+			TypeCache.Refresh (715ms)
+				TypeCache.ScanAssembly (662ms)
+			BuildScriptInfoCaches (77ms)
+			ResolveRequiredComponents (16ms)
+	FinalizeReload (3148ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (1612ms)
+		SetupLoadedEditorAssemblies (2362ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (7ms)
-			SetLoadedEditorAssemblies (12ms)
-			BeforeProcessingInitializeOnLoad (171ms)
-			ProcessInitializeOnLoadAttributes (1379ms)
-			ProcessInitializeOnLoadMethodAttributes (41ms)
-			AfterProcessingInitializeOnLoad (2ms)
-			EditorAssembliesLoaded (0ms)
+			InitializePlatformSupportModulesInManaged (12ms)
+			SetLoadedEditorAssemblies (25ms)
+			BeforeProcessingInitializeOnLoad (115ms)
+			ProcessInitializeOnLoadAttributes (2047ms)
+			ProcessInitializeOnLoadMethodAttributes (158ms)
+			AfterProcessingInitializeOnLoad (3ms)
+			EditorAssembliesLoaded (1ms)
 		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (11ms)
+		AwakeInstancesAfterBackupRestoration (36ms)
 Launching external process: /Applications/Unity/Hub/Editor/2023.2.10f1/Unity.app/Contents/Tools/UnityShaderCompiler
-Launched and connected shader compiler UnityShaderCompiler after 0.12 seconds
-Refreshing native plugins compatible for Editor in 0.68 ms, found 2 plugins.
+Launched and connected shader compiler UnityShaderCompiler after 0.17 seconds
+Refreshing native plugins compatible for Editor in 1.17 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 46 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 3586 unused Assets / (1.4 MB). Loaded Objects now: 4165.
-Memory consumption went from 125.3 MB to 123.9 MB.
-Total: 9.669403 ms (FindLiveObjects: 0.411824 ms CreateObjectMapping: 0.521168 ms MarkObjects: 6.654977 ms  DeleteObjects: 2.078920 ms)
+Unloading 3587 unused Assets / (1.1 MB). Loaded Objects now: 4166.
+Memory consumption went from 125.2 MB to 124.1 MB.
+Total: 17.766252 ms (FindLiveObjects: 1.570260 ms CreateObjectMapping: 0.678220 ms MarkObjects: 12.281156 ms  DeleteObjects: 3.234287 ms)
 
 ========================================================================
 Received Import Request.
-  Time since last request: 6430.309040 seconds.
-  path: Assets/Scenes/top level map 1/Materials/marble_tiles_disp_4k.mat
-  artifactKey: Guid(6bfb324ed79684d85b7f2c6f37d4c1c0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/top level map 1/Materials/marble_tiles_disp_4k.mat using Guid(6bfb324ed79684d85b7f2c6f37d4c1c0) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'be9fefba843e1e5cdeff421e637b51a5') in 0.428927674 seconds
+  Time since last request: 12046.258995 seconds.
+  path: Assets/Scenes/First Level/LightingData.asset
+  artifactKey: Guid(1cf1253b8ffab4e85a1e084defe23f78) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/First Level/LightingData.asset using Guid(1cf1253b8ffab4e85a1e084defe23f78) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '809fdeddfbaf1a1f8ed6199a3fa64bc6') in 0.039079055 seconds
 Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
 
-========================================================================
-Received Import Request.
-  Time since last request: 228.119201 seconds.
-  path: Assets/Scenes/top level map 1/rough_plasterbrick_05_disp_4k.png
-  artifactKey: Guid(200fdf2ed7852463188184b5ead41bb1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/top level map 1/rough_plasterbrick_05_disp_4k.png using Guid(200fdf2ed7852463188184b5ead41bb1) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'd194416eb232459a5c684a39fb57852d') in 0.082449417 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000481 seconds.
-  path: Assets/Scenes/top level map 1/rough_plasterbrick_05_rough_4k.jpg
-  artifactKey: Guid(561dc290ae35149b3bbac31f721ca349) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/top level map 1/rough_plasterbrick_05_rough_4k.jpg using Guid(561dc290ae35149b3bbac31f721ca349) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '09cdaa95ff770971f62ae66bc30e8590') in 0.022570672 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 1509.350450 seconds.
-  path: Assets/Prefabs/Lights/ceiling-light/textures/FluorescentLight_Emissive.png
-  artifactKey: Guid(0c2786ce32a534babadc6a826632692a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Lights/ceiling-light/textures/FluorescentLight_Emissive.png using Guid(0c2786ce32a534babadc6a826632692a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '05accfe65ebe5306d07337d7e5e10e30') in 0.077733577 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.003497 seconds.
-  path: Assets/Prefabs/Lights/ceiling-light/textures/FluorescentLight_Opacity.png
-  artifactKey: Guid(dec5cad796de24a998664c9a74eac9e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Lights/ceiling-light/textures/FluorescentLight_Opacity.png using Guid(dec5cad796de24a998664c9a74eac9e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '7318be7df52b4ae00c42ccfc0e5e2cc0') in 0.024230783 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 1212.813511 seconds.
-  path: Assets/Scenes/top level map 1/Materials/rough_plasterbrick_05_diff_4k.mat
-  artifactKey: Guid(76aa805727d5942f9aa5fa5c602fe633) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/top level map 1/Materials/rough_plasterbrick_05_diff_4k.mat using Guid(76aa805727d5942f9aa5fa5c602fe633) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '5b6ad715b99357c681cfa4d1b0fc0653') in 0.092911842 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.003209 seconds.
-  path: Assets/Scenes/top level map 1/Materials/rough_plasterbrick_05_disp_4k.mat
-  artifactKey: Guid(5c64a1224e2dc4e2f9a3b6f4f71b99fb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/top level map 1/Materials/rough_plasterbrick_05_disp_4k.mat using Guid(5c64a1224e2dc4e2f9a3b6f4f71b99fb) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '343dee744c422565e383dff113ea1ab6') in 0.043878386 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 502.563434 seconds.
-  path: Assets/Materials/rubber_tiles_disp_4k.png
-  artifactKey: Guid(73cc6db224fb34360b79c9e0de6831e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Materials/rubber_tiles_disp_4k.png using Guid(73cc6db224fb34360b79c9e0de6831e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'ccf84534ba85a96c5e81187a1e4c8001') in 0.031427684 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000242 seconds.
-  path: Assets/Materials/rubber_tiles_nor_gl_4k.exr
-  artifactKey: Guid(4866c89ab322b483186c52d3a3bcc51d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Materials/rubber_tiles_nor_gl_4k.exr using Guid(4866c89ab322b483186c52d3a3bcc51d) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '7d2eb995ff6ee678bd2b41be903ef72b') in 0.033392997 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000590 seconds.
-  path: Assets/Materials/rubber_tiles_rough_4k.exr
-  artifactKey: Guid(1375d3e67864043d3a6bfd15659d173c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Materials/rubber_tiles_rough_4k.exr using Guid(1375d3e67864043d3a6bfd15659d173c) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'b83064782356014385c05b03b364af2d') in 0.033403656 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.625103 seconds.
-  path: Assets/Materials/Materials/marble_tiles_disp_4k.png
-  artifactKey: Guid(72cf2fc06ccea434bb798d8880c9f937) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Materials/Materials/marble_tiles_disp_4k.png using Guid(72cf2fc06ccea434bb798d8880c9f937) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '45dafc5d94f95f61aabb91af217486af') in 0.014740266 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.001018 seconds.
-  path: Assets/Materials/Materials/marble_tiles_nor_gl_4k.exr
-  artifactKey: Guid(e4d49e106a8d44cd9b98bdf88eff7c93) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Materials/Materials/marble_tiles_nor_gl_4k.exr using Guid(e4d49e106a8d44cd9b98bdf88eff7c93) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '8bb02160bf10d5547910b62bc90cc271') in 0.027745551 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.001344 seconds.
-  path: Assets/Materials/Materials/rubber_tiles_rough_4k.mat
-  artifactKey: Guid(789ee123f1964476a84ee43c2a441ca5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Materials/Materials/rubber_tiles_rough_4k.mat using Guid(789ee123f1964476a84ee43c2a441ca5) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '6d48a466644ac6b047a053ba4c2ba6d6') in 0.034358662 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.001518 seconds.
-  path: Assets/Materials/Materials/rubber_tiles_diff_4k.mat
-  artifactKey: Guid(4ba1c8b80e7d4448bab0795ecd7f716b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Materials/Materials/rubber_tiles_diff_4k.mat using Guid(4ba1c8b80e7d4448bab0795ecd7f716b) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '46c118b04a0b35ae3401446775f33fb2') in 0.018870528 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
-AssetImportWorker is now disconnected from the server
-Process exiting
