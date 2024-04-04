@@ -11,9 +11,10 @@ public class PlayerController : MonoBehaviour
     public float runSpeed = 12f;
     public float jumpPower = 7f;
     public float gravity = 10f;
+
     public int maxHP = 100; // Maximum HP
     private int currentHP; // Current HP 
-
+    public bool hasPills = false; // Flag to check if the player has pills
 
     [SerializeField]
     private StatusController theStatusController;
@@ -60,8 +61,12 @@ public class PlayerController : MonoBehaviour
 
     public void IncreaseHP(int amount)
     {
-        currentHP += amount;
-        currentHP = Mathf.Clamp(currentHP, 0, maxHP); // Ensure HP doesn't exceed maxHP
+        if (hasPills)
+        {
+            currentHP += amount;
+            currentHP = Mathf.Clamp(currentHP, 0, maxHP); // Ensure HP doesn't exceed max
+            hasPills = false; // Reset the pills flag
+        }
     }
 
 
