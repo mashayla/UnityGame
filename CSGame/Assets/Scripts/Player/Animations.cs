@@ -5,7 +5,7 @@ using UnityEngine;
 public class Animations : MonoBehaviour
 {
     public Animator animator;
-    private bool isJumping = false;
+  //  private bool isJumping = false;
 
 
     void Update()

@@ -8,16 +8,21 @@ public class BedInteraction : MonoBehaviour
     public Camera mainCamera; // Assign your main camera here
     public GameObject cameraPositionObject; // Assign the empty GameObject under the bed here
     public GameObject playerCapsulePos;
-    public CharacterController controller;
+    public CharacterController setupController;
+
+
+
     private bool isUnderBed = false;
     private Vector3 originalPlayerPosition;
   
     private Vector3 originalCameraPosition;
-    //private Quaternion originalControllerRotation;
+    private Quaternion originalControllerRotation;
+    private Vector3 originalControllerPosition;
     private Vector3 originalPlayerCapsulePosition;
 
     void Update()
     {
+       
         if (Input.GetMouseButtonDown(0)) // Left mouse button click
         {
             RaycastHit hit;
@@ -39,14 +44,17 @@ public class BedInteraction : MonoBehaviour
 
         if (isUnderBed)
         {
-            controller.enabled = false;
+            // Store the original Character Controller orientation
+            originalControllerRotation = setupController.transform.rotation;
+            originalControllerPosition = setupController.transform.position;
+
+            setupController.enabled = false;
+    
             // Store the original player and camera positions and rotations
             originalPlayerPosition = player.transform.position;
             originalCameraPosition = mainCamera.transform.position;
             originalPlayerCapsulePosition = playerCapsulePos.transform.position;
-            // Store the original Character Controller orientation
-        //    originalControllerRotation = controller.transform.rotation;
-      //  controller.po
+            
             // Move player to the camera position object
             player.transform.position = cameraPositionObject.transform.position;
             playerCapsulePos.transform.position = cameraPositionObject.transform.position;
@@ -57,16 +65,19 @@ public class BedInteraction : MonoBehaviour
         }
         else
         {
-            controller.enabled = true;
+
+            // Restore the Character Controller's orientation
+            setupController.transform.rotation = originalControllerRotation;
+            setupController.transform.position = originalControllerPosition;
+
+            setupController.enabled = true;
             // Restore player and camera positions and rotations
             player.transform.position = originalPlayerPosition;
             mainCamera.transform.position = originalCameraPosition;
             playerCapsulePos.transform.position = originalPlayerCapsulePosition;
-            // Restore the Character Controller's orientation
-          //  controller.transform.rotation = originalControllerRotation;
 
             // Ensure the Character Controller is aligned with the player model
-            controller.transform.position = player.transform.position;
+            setupController.transform.position = player.transform.position;
 
             // Make the player model visible again
             player.SetActive(true);
