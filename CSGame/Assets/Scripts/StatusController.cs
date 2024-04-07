@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -22,19 +20,15 @@ public class StatusController : MonoBehaviour
     private bool spUsed;
 
     [SerializeField]
-
     private Image[] images_Gauge;
 
     private const int HP = 0, SP = 1;
-
 
     // Start is called before the first frame update
     void Start()
     {
         currentHp = hp;
         currentSp = sp;
-
-
     }
 
     // Update is called once per frame
@@ -63,7 +57,6 @@ public class StatusController : MonoBehaviour
     private void GaugeUpdate(){
         images_Gauge[HP].fillAmount = (float) currentHp / hp;
         images_Gauge[SP].fillAmount = (float) currentSp / sp;
-
     }
     public void DecreaseStamina(int _count){
         spUsed = true;
@@ -77,5 +70,21 @@ public class StatusController : MonoBehaviour
     }
     public int getCurrentSP(){
         return currentSp;
+    }
+
+
+    public void ReduceHPByPercentage(float percentage)
+    {
+        int damage = (int)(hp * percentage);
+        currentHp -= damage;
+        if (currentHp < 0) currentHp = 0;
+
+        
+    }
+
+
+    public bool IsPlayerDead()
+    {
+        return currentHp <= 0;
     }
 }

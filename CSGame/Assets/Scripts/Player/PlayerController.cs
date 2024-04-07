@@ -32,7 +32,11 @@ public class PlayerController : MonoBehaviour
     CharacterController characterController;
     //Leslie added code:
     public static PlayerController instance; // Static instance property
-
+    public void ReduceHPByPercentage(float percentage)
+    {
+        // Call the ReduceHPByPercentage method on the StatusController
+        theStatusController.ReduceHPByPercentage(percentage);
+    }
     void Awake()
     {
         if (instance == null)
@@ -126,5 +130,11 @@ public class PlayerController : MonoBehaviour
         }
 
         #endregion
+
+
+        if (theStatusController.IsPlayerDead())
+        {
+            canMove = false;
+        }
     }
 }
