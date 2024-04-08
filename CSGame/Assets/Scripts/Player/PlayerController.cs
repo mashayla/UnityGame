@@ -32,11 +32,14 @@ public class PlayerController : MonoBehaviour
     CharacterController characterController;
     //Leslie added code:
     public static PlayerController instance; // Static instance property
+
+    public Weapon weapon;
     public void ReduceHPByPercentage(float percentage)
     {
         // Call the ReduceHPByPercentage method on the StatusController
         theStatusController.ReduceHPByPercentage(percentage);
     }
+
     void Awake()
     {
         if (instance == null)
@@ -73,6 +76,23 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    public void UseWeapon()
+    {
+        if (weapon != null)
+            {
+            // Assuming you have a reference to the enemy that was hit
+                Enemy hitEnemy = weapon.DetectHitEnemy();
+                if (hitEnemy != null)
+                    {
+                        // Make the enemy immovable for 3 seconds
+                        StartCoroutine(hitEnemy.MakeImmovable(3f));
+                }
+        }
+        else
+        {
+            Debug.Log("No weapon equipped. Cannot attack.");
+        }
+    }
 
     void Update()
     {
@@ -131,6 +151,9 @@ public class PlayerController : MonoBehaviour
 
         #endregion
 
+        if(Input.GetMouseButton(0) && canMove){
+            UseWeapon();
+        }
 
         if (theStatusController.IsPlayerDead())
         {

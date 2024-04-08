@@ -37,6 +37,7 @@ public class StatusController : MonoBehaviour
         GaugeUpdate();
         SPRechargeTime();
         SPRecover();
+        
     }
 
     private void SPRechargeTime(){
