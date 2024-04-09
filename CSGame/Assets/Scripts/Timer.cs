@@ -26,16 +26,16 @@ public class Timer : MonoBehaviour
                 timeRemaining -= Time.deltaTime;
                 DisplayTime(timeRemaining);
             }
-            else
+            else //transition..game over
             {
-                Debug.Log("Time has run out...You Died");
+                Debug.Log("Time has run out...You Died"); 
                 timeRemaining = 0;
                 timerIsRunning = false;
             }
         }
     }
 
-    void DisplayTime(float timeToDisplay)
+    void DisplayTime(float timeToDisplay) //converts and displays time
     {
         timeToDisplay +=1;
         float minutes = Mathf.FloorToInt(timeToDisplay / 60);
