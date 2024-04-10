@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 
@@ -31,6 +32,11 @@ public class PauseMenu : MonoBehaviour
 
         //this.GetComponent<FirstPersonController>().GetComponent<MouseLook>().enabled = false;
         Cursor.lockState = CursorLockMode.None;
+    }
+
+    public void Home()
+    {
+        SceneManager.LoadScene("Main Menu");
     }
 
     public void Resume()
