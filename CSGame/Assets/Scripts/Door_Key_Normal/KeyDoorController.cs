@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI; 
+
 public class KeyDoorController : MonoBehaviour
 {
     public bool isLocked = true; // Whether the door is currently locked
@@ -11,16 +13,20 @@ public class KeyDoorController : MonoBehaviour
 
     public Transform player; // Reference to the player's transform
 
-    // Removed the rotation-related variables since the door won't physically open
+    // Reference to the fade image
+    public Image fadeImage;
 
+    // Duration of the fade effect in seconds
+    public float fadeDuration = 1f;
+
+    void Start()
+    {
+        // Start the fade-out animation at the beginning of the game
+        StartCoroutine(StartFadeOut());
+    }
     void Update()
     {
-        // Check if the player has the key and is within the unlock distance
-        if (hasKey && Vector3.Distance(transform.position, player.position) <= unlockDistance)
-        {
-            // The door won't physically open, so no need to set a target angle
-        }
-
+       
         // Check for click event
         if (Input.GetMouseButtonDown(0)) // Left mouse button click
         {
@@ -31,7 +37,7 @@ public class KeyDoorController : MonoBehaviour
             {
                 if (hit.transform == this.transform && hasKey)
                 {
-                    LoadNewScene();
+                    StartCoroutine(FadeAndLoadScene());
                 }
             }
         }
@@ -47,16 +53,39 @@ public class KeyDoorController : MonoBehaviour
         }
     }
 
-    // Method to load a new scene
-    void LoadNewScene()
+    IEnumerator StartFadeOut()
     {
-        if (!string.IsNullOrEmpty(sceneToLoad))
+        // Fade out
+        float fadeStartTime = Time.time;
+        while (fadeImage.color.a > 0)
         {
-            SceneManager.LoadScene(sceneToLoad);
+            float t = (Time.time - fadeStartTime) / fadeDuration;
+            fadeImage.color = new Color(fadeImage.color.r, fadeImage.color.g, fadeImage.color.b, Mathf.Lerp(1, 0, t));
+            yield return null;
         }
-        else
+    }
+
+    IEnumerator FadeAndLoadScene()
+    {
+        // Fade out
+        float fadeStartTime = Time.time;
+        while (fadeImage.color.a < 1)
         {
-            Debug.LogError("No scene specified to load.");
+            float t = (Time.time - fadeStartTime) / fadeDuration;
+            fadeImage.color = new Color(fadeImage.color.r, fadeImage.color.g, fadeImage.color.b, Mathf.Lerp(0, 1, t));
+            yield return null;
+        }
+
+        // Load the new scene
+        SceneManager.LoadScene(sceneToLoad);
+
+        // Fade in
+        fadeStartTime = Time.time;
+        while (fadeImage.color.a > 0)
+        {
+            float t = (Time.time - fadeStartTime) / fadeDuration;
+            fadeImage.color = new Color(fadeImage.color.r, fadeImage.color.g, fadeImage.color.b, Mathf.Lerp(1, 0, t));
+            yield return null;
         }
     }
 }
