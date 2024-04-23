@@ -2,10 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using TMPro; // Change this line to import TMPro namespace
+using TMPro; 
+using UnityEngine.SceneManagement;
 
 public class Timer : MonoBehaviour
 {
+    
     public float timeRemaining = 60;
     public bool timerIsRunning = false;
     public TextMeshProUGUI timeText;
@@ -28,9 +30,11 @@ public class Timer : MonoBehaviour
             }
             else //transition..game over
             {
+                
                 Debug.Log("Time has run out...You Died"); 
                 timeRemaining = 0;
                 timerIsRunning = false;
+                SceneManager.LoadScene("Lost Game");
             }
         }
     }
