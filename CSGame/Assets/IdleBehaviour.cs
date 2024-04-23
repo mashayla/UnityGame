@@ -17,7 +17,7 @@ public class IdleBehaviour : StateMachineBehaviour
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         timer += Time.deltaTime;
-        if (timer > 5)
+        if (timer > 1)
         {
             //switch to the patrol state
             animator.SetBool("isPatrolling", true);
