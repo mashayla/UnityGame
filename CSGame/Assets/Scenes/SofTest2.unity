@@ -677,6 +677,8 @@ MonoBehaviour:
   player: {fileID: 1025051208}
   playerController: {fileID: 3058115333242008215}
   scalpelHolder: {fileID: 1473605680}
+  pickupText: {fileID: 0}
+  fadeDuration: 1
 --- !u!1001 &21259867
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3598,6 +3600,8 @@ MonoBehaviour:
   pickupDistance: 2
   player: {fileID: 1025051208}
   playerController: {fileID: 3058115333242008215}
+  pickupText: {fileID: 0}
+  fadeDuration: 1
 --- !u!1001 &341658558
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4060,6 +4064,8 @@ MonoBehaviour:
   pickupDistance: 2
   player: {fileID: 1025051208}
   playerController: {fileID: 3058115333242008215}
+  pickupText: {fileID: 0}
+  fadeDuration: 1
 --- !u!4 &355447608 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1035464767207277277, guid: 188b0aae85bce07428aaaae4653bc78d, type: 3}
@@ -4547,6 +4553,8 @@ MonoBehaviour:
   pickupDistance: 2
   player: {fileID: 1025051208}
   playerController: {fileID: 3058115333242008215}
+  pickupText: {fileID: 0}
+  fadeDuration: 1
 --- !u!1 &414747070
 GameObject:
   m_ObjectHideFlags: 0
@@ -7482,6 +7490,8 @@ MonoBehaviour:
   player: {fileID: 1025051208}
   playerController: {fileID: 3058115333242008215}
   scalpelHolder: {fileID: 1473605680}
+  pickupText: {fileID: 0}
+  fadeDuration: 1
 --- !u!1001 &580892678
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11408,8 +11418,8 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 0
+  m_UseGravity: 0
+  m_IsKinematic: 1
   m_Interpolate: 1
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -11425,8 +11435,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ebdbde690d4feb74aabaafbe0550e9b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  doorTransform: {fileID: 357051501}
-  interactionDistance: 1.5
+  doorTransform: {fileID: 1580345097}
+  interactionDistance: 1
   graphUpdateScene: {fileID: 2078064573}
   doorOpenDistance: 1
 --- !u!43 &805957779
@@ -12044,6 +12054,8 @@ MonoBehaviour:
   pickupDistance: 2
   player: {fileID: 1025051208}
   playerController: {fileID: 3058115333242008215}
+  pickupText: {fileID: 0}
+  fadeDuration: 1
 --- !u!1 &843913964
 GameObject:
   m_ObjectHideFlags: 0
@@ -12699,6 +12711,8 @@ MonoBehaviour:
   pickupDistance: 2
   player: {fileID: 1025051208}
   playerController: {fileID: 3058115333242008215}
+  pickupText: {fileID: 0}
+  fadeDuration: 1
 --- !u!1 &893714555
 GameObject:
   m_ObjectHideFlags: 0
@@ -14341,6 +14355,8 @@ MonoBehaviour:
   pickupDistance: 2
   player: {fileID: 1025051208}
   playerController: {fileID: 3058115333242008215}
+  pickupText: {fileID: 0}
+  fadeDuration: 1
 --- !u!1001 &999613054
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17935,6 +17951,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 380973573311029730, guid: b59fb16846c459844917bec822e35f3e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3418624311277135495, guid: b59fb16846c459844917bec822e35f3e, type: 3}
       propertyPath: player
       value: 
@@ -21669,7 +21689,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 72e4fbbd9d3e3684791dfe78a3715150, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -9.99
+      value: -1.43
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 72e4fbbd9d3e3684791dfe78a3715150, type: 3}
       propertyPath: m_LocalRotation.w
@@ -23671,6 +23691,7 @@ GameObject:
   - component: {fileID: 1580345100}
   - component: {fileID: 1580345099}
   - component: {fileID: 1580345098}
+  - component: {fileID: 1580345101}
   m_Layer: 0
   m_Name: Doors
   m_TagString: door
@@ -23756,6 +23777,40 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1580345101
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1580345096}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: efee954c69f0d421086729bb8df1137f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 1
+  uniqueID: 7108225739364771862
+  points:
+  - {x: 1.83, y: 0, z: 1.91}
+  - {x: -2.17, y: 0, z: 1.87}
+  - {x: -2.13, y: 0, z: -0.69}
+  - {x: 1.69, y: 0, z: -0.66}
+  convex: 1
+  minBoundsHeight: 1
+  penaltyDelta: 0
+  modifyWalkability: 0
+  setWalkability: 0
+  applyOnStart: 1
+  applyOnScan: 1
+  updatePhysics: 0
+  resetPenaltyOnPhysics: 1
+  updateErosion: 1
+  modifyTag: 0
+  setTag: 0
+  legacyMode: 0
+  serializedVersion: 1
+  legacyUseWorldSpace: 0
 --- !u!1001 &1590878939
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23917,7 +23972,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 1
   data:
-    dataString: UEsDBBQAAAgIAACYn+uEprlOYQIAABgFAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQF1VE1z2jAQ/SuMziVjzFfSW2sI6SEJE9rJxRchr7EGWfLoI0Ay/PeuZBu7MD3Zfvv27dvVyl+ES1MBs0qvNM+eVQbk+4D4d/Jt0AWf4Eh3Sm74J7Scd57ZwpNo4LxRyxXiI59mVAlWc/ZD7oQnRwg6yXOly2W2g0QZaxDOqTCAIa2sz5YIfQ3IsUk4Nc9P/xyc8Y2BtKD/zxo+3M2m0f14HthOMkHLCjLvuksat1njWlRiPw3De2dKCG4aM8SeqtBsQivjsBUkZJxic8FGjJ8F8F1h8WPST37NcwO2kdT0tOAaZ1Srkp+qHlxJzb729UGF83Xi6Sx4qkWfb+LDUQjnWpVPbd1R5BuyBWf7N3pi1NjeZPvwojNen8eBij3dCngvQL6olVZOZhi02vlUZyBe9KQuvSUFsH3Hq722YMt21e0xjbrDPIf2j4ng5dYjd3ENbIQKA5+O7+aIgMbD+YWew3qYRgtR7+OPgd9019+jJvDItbEYakpKb3CrnPZUsgxj8/04mygtIcBNLxVIKuxpjTK2f4rRbaxX9irySP2NaYo3sfYiXKUEuONH0VVorQ7QKplCHZ7BFK/OCi6hM+0DLzinRElZL1l/Jm3axumcsl7azvHs3+0icTyf5nQ2n0xmcP8wmg+3U0anNJ5s4xnMWXRPwvpxiX1Ssa6NNuPBc5OduMRVa38kg5WmVVj4TNPDin+WqjdyLnO1YRpAvtYKF+OgsQhezGyZcRzQBqzlMpw3+UqJUGwPWXoRSkOny6PVNO1UUlLxD2U9kpIk/D5S4uHLNq81fHA4+OKt2Jmc/wJQSwMEFAAACAgAAJif64pPuaxtAAAAeAAAAAkAJABtZXRhLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQGrVipLLSrOzM9TslIw0TPSMzTXUVBKL0osyCgGihiCOKWZKSB2tJKRkblpWqKZuYmJWaqFpaG5bpJpcqJpopFJkpFZqnmygYVSLFB9SWVBql9ibipET0BiSUZaZl5KZl66nntRZoo7yGil2FoAUEsBAi0AFAAACAgAAJif64SmuU5hAgAAGAUAAAsAJAAAAAAAAAAAAAAAAAAAAGdyYXBoMC5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0BUEsBAi0AFAAACAgAAJif64pPuaxtAAAAeAAAAAkAJAAAAAAAAAAAAAAArgIAAG1ldGEuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAVBLBQYAAAAAAgACALgAAABmAwAAAAA=
+    dataString: UEsDBBQAAAgIAACYn+u1jytrXQIAABgFAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQF1VE1z2jAQ/SuMzk3GGAxJb61DSA9JmJBOLr4IeY01yJJHHwGS4b93JdvYJe3J1tvdt28/pE/CpamBWaWXmuePKgfyfUT8P/k26o0PcKBbJdf8AzqfN57b0jvR4PNCLVeIj32YURVYzdkPuRXeOULQSV4oXS3yLaTKWINwQYUBNGllfbRE6HNEDm3Asf1++O/ohH8MpAX9f6+r2+tZEt1M5sHbSSZoVUPuVfdBky5q0pBKrKf18NqZEoKbVgyxxzoUm9LaOCwFHXJOsbggI8ZjCXxbWjxMh8HPRWHAtpSaHu+4xh41rOSnahpXUbNrdL1T4XyeOJkFTQ3p4z/sSbAXWlUPXeJx5CuyJWe7F3pk1HjQagcX6F0vvJnHnood3Qh4K0E+qaVWTuaDqTgD8d3gfC4uLYHt+hyN2AvQ1V/HNO6HeQrlH1LBq41HruMGWAsVGp5MrueIgMbh/ELNYT1My4Wol/HbwCvdDveoNdxzbSya2pTS69sop70rWYSu+XKcTZWWEOBWdQ2SCntcIY0dTjH6ahukvbDcU39j2uStrbsIFyEB7v2j6MK0UnvomEyp9o9gymdnBZfQi/aGJ+xTqqRslmzYky5s7XRB2SBs63j+93aROJ4nBZ3Np9MZ3NyO51ebhNGExtNNPIM5i25I2D4usU4qVo3Qtj04N9mTS1y17iEZLTWtw8Lnmu6X/KNSg5ZzWag10wDyuWE4CweNSfBi5oucY4PWYC2XYd7kMyNCsR3k2ZkoC5UuDlbTrGfJSM3flfVIRtLwfGTEw+dlXml457D3yTuyEzn9AVBLAwQUAAAICAAAmJ/rik+5rG0AAAB4AAAACQAkAG1ldGEuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAatWKkstKs7Mz1OyUjDRM9IzNNdRUEovSizIKAaKGII4pZkpIHa0kpGRuWlaopm5iYlZqoWloblukmlyommikUmSkVmqebKBhVIsUH1JZUGqX2JuKkRPQGJJRlpmXkpmXrqee1FmijvIaKXYWgBQSwECLQAUAAAICAAAmJ/rtY8ra10CAAAYBQAACwAkAAAAAAAAAAAAAAAAAAAAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFQSwECLQAUAAAICAAAmJ/rik+5rG0AAAB4AAAACQAkAAAAAAAAAAAAAACqAgAAbWV0YS5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0BUEsFBgAAAAACAAIAuAAAAGIDAAAAAA==
     upgradeData: 
     file_cachedStartup: {fileID: 0}
     data_cachedStartup: 
@@ -24874,6 +24929,8 @@ MonoBehaviour:
   pickupDistance: 2
   player: {fileID: 1025051208}
   playerController: {fileID: 3058115333242008215}
+  pickupText: {fileID: 0}
+  fadeDuration: 1
 --- !u!1001 &1674908659
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -25151,6 +25208,8 @@ MonoBehaviour:
   player: {fileID: 1025051208}
   playerController: {fileID: 3058115333242008215}
   scalpelHolder: {fileID: 1473605680}
+  pickupText: {fileID: 0}
+  fadeDuration: 1
 --- !u!114 &1709576060 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6458978386640880247, guid: b6db90e890156084ab0e2714cec8ded4, type: 3}
@@ -27014,6 +27073,8 @@ MonoBehaviour:
   pickupDistance: 2
   player: {fileID: 1025051208}
   playerController: {fileID: 3058115333242008215}
+  pickupText: {fileID: 0}
+  fadeDuration: 1
 --- !u!1001 &1865421923
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27676,6 +27737,8 @@ MonoBehaviour:
   pickupDistance: 2
   player: {fileID: 1025051208}
   playerController: {fileID: 3058115333242008215}
+  pickupText: {fileID: 0}
+  fadeDuration: 1
 --- !u!114 &1955395917 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6458978386640880247, guid: b6db90e890156084ab0e2714cec8ded4, type: 3}
@@ -27867,7 +27930,7 @@ MeshCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_ProvidesContacts: 1
   m_Enabled: 1
   serializedVersion: 5
@@ -28079,10 +28142,10 @@ MonoBehaviour:
   version: 1
   uniqueID: 3986525831667070716
   points:
-  - {x: 0.53, y: 0, z: 0.5}
-  - {x: 0.75, y: 0, z: -0.65}
-  - {x: -0.44, y: 0, z: -0.65}
-  - {x: -0.44, y: 0, z: 0.59}
+  - {x: 1.33, y: 0, z: 0.82}
+  - {x: 1.31, y: 0, z: -0.65}
+  - {x: -1.75, y: 0, z: -0.9}
+  - {x: -1.8, y: 0, z: 0.59}
   convex: 0
   minBoundsHeight: 4
   penaltyDelta: 0
@@ -28113,7 +28176,7 @@ MonoBehaviour:
   openAngle: 90
   closeSpeed: 2
   openSpeed: 2
-  isOpen: 1
+  isOpen: 0
 --- !u!64 &2015009191
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -28151,12 +28214,12 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 1
+  m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 2.386896, y: 1, z: 1}
+  m_Center: {x: -0.38060015, y: 0, z: -7.324839e-10}
 --- !u!4 &2023529329 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4859418046888544, guid: 93a05457281f2e44ebb512db1fbd1e9e, type: 3}
@@ -28832,9 +28895,9 @@ MonoBehaviour:
   version: 1
   uniqueID: 5659353199523541284
   points:
-  - {x: -1.15, y: 0, z: 0.86}
-  - {x: -1.18, y: 0, z: -1.24}
-  - {x: 1.46, y: 0, z: -1.16}
+  - {x: -1.13, y: 0, z: 0.73}
+  - {x: -1.02, y: 0, z: -0.68}
+  - {x: 1.43, y: 0, z: -0.68}
   - {x: 1.32, y: 0, z: 0.82}
   convex: 0
   minBoundsHeight: 4
@@ -29031,6 +29094,8 @@ MonoBehaviour:
   pickupDistance: 2
   player: {fileID: 1025051208}
   playerController: {fileID: 3058115333242008215}
+  pickupText: {fileID: 0}
+  fadeDuration: 1
 --- !u!1 &2088038410
 GameObject:
   m_ObjectHideFlags: 0
