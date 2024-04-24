@@ -6792,6 +6792,10 @@ PrefabInstance:
       value: Player Setup
       objectReference: {fileID: 0}
     - target: {fileID: 2487784301293115857, guid: 310f713af94af224c992e5f9c72a4590, type: 3}
+      propertyPath: maxHP
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 2487784301293115857, guid: 310f713af94af224c992e5f9c72a4590, type: 3}
       propertyPath: runSpeed
       value: 4
       objectReference: {fileID: 0}
@@ -7895,6 +7899,8 @@ MonoBehaviour:
   attackRadius: 5
   radiusIncreaseInterval: 30
   radiusIncreaseAmount: 1
+  obstacleDistance: 3
+  damagePercentage: 0.5
   patrolPoints:
   - {fileID: 953733458}
   - {fileID: 1663239264}
