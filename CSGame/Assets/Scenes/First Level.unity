@@ -661,7 +661,7 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7761890824340462577, guid: aff0f76f8ae59164cbf8813230fd4c40, type: 3}
   m_PrefabInstance: {fileID: 755432938}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &20813325
+--- !u!114 &20813327
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -670,7 +670,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 20813322}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3a40ca31c41d46740b99b5531975db02, type: 3}
+  m_Script: {fileID: 11500000, guid: 62ee908d1e564494f9838bc5ce849d59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   pickupDistance: 2
@@ -678,7 +678,7 @@ MonoBehaviour:
   playerController: {fileID: 3058115333242008215}
   scalpelHolder: {fileID: 1473605680}
   pickupText: {fileID: 2042825761}
-  fadeDuration: 5
+  fadeDuration: 3
 --- !u!1001 &21259867
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3813,7 +3813,7 @@ MonoBehaviour:
   player: {fileID: 1025051208}
   playerController: {fileID: 3058115333242008215}
   pickupText: {fileID: 111938329}
-  fadeDuration: 5
+  fadeDuration: 1
 --- !u!1001 &341658558
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4277,7 +4277,7 @@ MonoBehaviour:
   player: {fileID: 1025051208}
   playerController: {fileID: 3058115333242008215}
   pickupText: {fileID: 111938329}
-  fadeDuration: 5
+  fadeDuration: 1
 --- !u!4 &355447608 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1035464767207277277, guid: 188b0aae85bce07428aaaae4653bc78d, type: 3}
@@ -4761,7 +4761,7 @@ MonoBehaviour:
   player: {fileID: 1025051208}
   playerController: {fileID: 3058115333242008215}
   pickupText: {fileID: 111938329}
-  fadeDuration: 5
+  fadeDuration: 1
 --- !u!1 &414747070
 GameObject:
   m_ObjectHideFlags: 0
@@ -7811,7 +7811,7 @@ PrefabInstance:
       addedObject: {fileID: 569978221}
     - targetCorrespondingSourceObject: {fileID: 6988485151556436299, guid: aff0f76f8ae59164cbf8813230fd4c40, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 569978224}
+      addedObject: {fileID: 569978226}
   m_SourcePrefab: {fileID: 100100000, guid: aff0f76f8ae59164cbf8813230fd4c40, type: 3}
 --- !u!1 &569978220 stripped
 GameObject:
@@ -7845,7 +7845,7 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7761890824340462577, guid: aff0f76f8ae59164cbf8813230fd4c40, type: 3}
   m_PrefabInstance: {fileID: 569978219}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &569978224
+--- !u!114 &569978226
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -7854,7 +7854,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 569978220}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3a40ca31c41d46740b99b5531975db02, type: 3}
+  m_Script: {fileID: 11500000, guid: 62ee908d1e564494f9838bc5ce849d59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   pickupDistance: 2
@@ -7862,7 +7862,7 @@ MonoBehaviour:
   playerController: {fileID: 3058115333242008215}
   scalpelHolder: {fileID: 1473605680}
   pickupText: {fileID: 2042825761}
-  fadeDuration: 5
+  fadeDuration: 3
 --- !u!1 &571497637 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 793777658683523728, guid: 033951ce8f570b54290f581a311ce86e, type: 3}
@@ -9019,7 +9019,7 @@ MeshCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 1
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
@@ -9104,9 +9104,21 @@ PrefabInstance:
       propertyPath: m_CollisionDetection
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1711628047677493907, guid: a17f40b85621348429719dbe73a62e68, type: 3}
+      propertyPath: m_Avatar
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1711628047677493907, guid: a17f40b85621348429719dbe73a62e68, type: 3}
+      propertyPath: m_WarningMessage
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 1833818073993832768, guid: a17f40b85621348429719dbe73a62e68, type: 3}
       propertyPath: m_Height
       value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 5143391547131787710, guid: a17f40b85621348429719dbe73a62e68, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.118
       objectReference: {fileID: 0}
     - target: {fileID: 5143391547131787710, guid: a17f40b85621348429719dbe73a62e68, type: 3}
       propertyPath: m_LocalPosition.x
@@ -11639,7 +11651,7 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 6988485151556436299, guid: aff0f76f8ae59164cbf8813230fd4c40, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 20813325}
+      addedObject: {fileID: 20813327}
   m_SourcePrefab: {fileID: 100100000, guid: aff0f76f8ae59164cbf8813230fd4c40, type: 3}
 --- !u!1001 &778555051
 PrefabInstance:
@@ -12503,7 +12515,7 @@ MonoBehaviour:
   player: {fileID: 1025051208}
   playerController: {fileID: 3058115333242008215}
   pickupText: {fileID: 111938329}
-  fadeDuration: 5
+  fadeDuration: 1
 --- !u!1 &843913964
 GameObject:
   m_ObjectHideFlags: 0
@@ -12965,6 +12977,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 68b6eead0fbdcb44999d84e3209ff603, type: 3}
+--- !u!1 &864603100 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 757534795349719946, guid: 6b4017847883c5148b532cbab44f335a, type: 3}
+  m_PrefabInstance: {fileID: 392862798095665762}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &876998902
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13155,7 +13172,7 @@ MonoBehaviour:
   player: {fileID: 1025051208}
   playerController: {fileID: 3058115333242008215}
   pickupText: {fileID: 111938329}
-  fadeDuration: 5
+  fadeDuration: 1
 --- !u!1 &893714555
 GameObject:
   m_ObjectHideFlags: 0
@@ -14518,6 +14535,24 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 128525545152520496, guid: 6b4017847883c5148b532cbab44f335a, type: 3}
   m_PrefabInstance: {fileID: 392862798095665762}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &986818498
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 864603100}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62ee908d1e564494f9838bc5ce849d59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pickupDistance: 2
+  player: {fileID: 1025051208}
+  playerController: {fileID: 3058115333242008215}
+  scalpelHolder: {fileID: 1473605680}
+  pickupText: {fileID: 2042825761}
+  fadeDuration: 3
 --- !u!1 &998548064 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5699737123736943355, guid: e9361fda00742f54ca1d2403099aa733, type: 3}
@@ -14539,7 +14574,7 @@ MonoBehaviour:
   player: {fileID: 1025051208}
   playerController: {fileID: 3058115333242008215}
   pickupText: {fileID: 111938329}
-  fadeDuration: 5
+  fadeDuration: 1
 --- !u!1001 &999613054
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21400,7 +21435,7 @@ MeshCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 1
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
@@ -25015,7 +25050,7 @@ MonoBehaviour:
   player: {fileID: 1025051208}
   playerController: {fileID: 3058115333242008215}
   pickupText: {fileID: 111938329}
-  fadeDuration: 5
+  fadeDuration: 1
 --- !u!1001 &1674908659
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -25145,7 +25180,7 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 6988485151556436299, guid: aff0f76f8ae59164cbf8813230fd4c40, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1707115493}
+      addedObject: {fileID: 1707115495}
   m_SourcePrefab: {fileID: 100100000, guid: aff0f76f8ae59164cbf8813230fd4c40, type: 3}
 --- !u!1001 &1698691320
 PrefabInstance:
@@ -25334,7 +25369,7 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7761890824340462577, guid: aff0f76f8ae59164cbf8813230fd4c40, type: 3}
   m_PrefabInstance: {fileID: 1685060187}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1707115493
+--- !u!114 &1707115495
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -25343,7 +25378,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1707115491}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3a40ca31c41d46740b99b5531975db02, type: 3}
+  m_Script: {fileID: 11500000, guid: 62ee908d1e564494f9838bc5ce849d59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   pickupDistance: 2
@@ -25351,7 +25386,7 @@ MonoBehaviour:
   playerController: {fileID: 3058115333242008215}
   scalpelHolder: {fileID: 1473605680}
   pickupText: {fileID: 2042825761}
-  fadeDuration: 5
+  fadeDuration: 3
 --- !u!114 &1709576060 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6458978386640880247, guid: b6db90e890156084ab0e2714cec8ded4, type: 3}
@@ -27216,7 +27251,7 @@ MonoBehaviour:
   player: {fileID: 1025051208}
   playerController: {fileID: 3058115333242008215}
   pickupText: {fileID: 111938329}
-  fadeDuration: 5
+  fadeDuration: 1
 --- !u!1001 &1865421923
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27801,7 +27836,7 @@ MonoBehaviour:
   player: {fileID: 1025051208}
   playerController: {fileID: 3058115333242008215}
   pickupText: {fileID: 111938329}
-  fadeDuration: 5
+  fadeDuration: 1
 --- !u!114 &1955395917 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6458978386640880247, guid: b6db90e890156084ab0e2714cec8ded4, type: 3}
@@ -29027,7 +29062,7 @@ MonoBehaviour:
   player: {fileID: 1025051208}
   playerController: {fileID: 3058115333242008215}
   pickupText: {fileID: 111938329}
-  fadeDuration: 5
+  fadeDuration: 1
 --- !u!1 &2088038410
 GameObject:
   m_ObjectHideFlags: 0
@@ -29832,10 +29867,14 @@ PrefabInstance:
       propertyPath: playerController
       value: 
       objectReference: {fileID: 3058115333242008215}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4411159675458075066, guid: 6b4017847883c5148b532cbab44f335a, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 757534795349719946, guid: 6b4017847883c5148b532cbab44f335a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 986818498}
   m_SourcePrefab: {fileID: 100100000, guid: 6b4017847883c5148b532cbab44f335a, type: 3}
 --- !u!1001 &2145820520198503594
 PrefabInstance:
@@ -30620,7 +30659,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5219042513448536982, guid: 024b0f899a737f547b4b86440840cbfe, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.2
+      value: 1.1
       objectReference: {fileID: 0}
     - target: {fileID: 5219042513448536982, guid: 024b0f899a737f547b4b86440840cbfe, type: 3}
       propertyPath: m_LocalPosition.x
@@ -30661,6 +30700,10 @@ PrefabInstance:
     - target: {fileID: 5219042513448536982, guid: 024b0f899a737f547b4b86440840cbfe, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6149232435318511830, guid: 024b0f899a737f547b4b86440840cbfe, type: 3}
+      propertyPath: walkSpeed
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6149232435318511830, guid: 024b0f899a737f547b4b86440840cbfe, type: 3}
       propertyPath: theStatusController

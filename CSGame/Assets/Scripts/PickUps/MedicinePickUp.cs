@@ -26,7 +26,7 @@ public class MedicineBottlePickup : MonoBehaviour
                
                 hasPickedUpMedicine = true;
                 StartCoroutine(FadeText());
-                Destroy(gameObject);
+         
             }
            
         }
@@ -43,8 +43,8 @@ public class MedicineBottlePickup : MonoBehaviour
             yield return null;
         }
 
-        // Wait for 3 seconds
-        yield return new WaitForSeconds(5f);
+        // Wait for 1 second
+        yield return new WaitForSeconds(1f);
 
         // Fade out
         fadeStartTime = Time.time;
@@ -52,10 +52,10 @@ public class MedicineBottlePickup : MonoBehaviour
         {
             float t = (Time.time - fadeStartTime) / fadeDuration;
             pickupText.color = new Color(pickupText.color.r, pickupText.color.g, pickupText.color.b, Mathf.Lerp(1, 0, t));
+          
             yield return null;
         }
-        //reset to false for next scalpel?
-       // hasPickedUpScalpel = false;
-       Debug.Log("FadeText coroutine completed");
+        Destroy(gameObject);
+
     }
 }

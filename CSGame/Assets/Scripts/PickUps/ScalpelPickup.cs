@@ -19,19 +19,19 @@ public class ScalpelPickup : MonoBehaviour
         // Check if the player is within the pickup distance and clicks the mouse
         if (Vector3.Distance(transform.position, player.position) <= pickupDistance && Input.GetMouseButtonDown(0))
         {
-            // Check if the key has already been picked up
+            // Check if the scalpel has already been picked up
             if (!hasPickedUpScalpel)
             {
                 //set its parent to the scalpelHolder
                 transform.SetParent(scalpelHolder);
 
-                // Optionally, reset the local position and rotation of the scalpel to match the scalpelHolder
+                // reset the local position and rotation of the scalpel to match the scalpelHolder
                 transform.localPosition = Vector3.zero;
                 transform.localRotation = Quaternion.identity;
-
+                hasPickedUpScalpel = true;
                 // Start the fade-in and fade-out coroutine
                 StartCoroutine(FadeText());
-                hasPickedUpScalpel = true;
+              
             }
         }
     }
@@ -57,5 +57,7 @@ public class ScalpelPickup : MonoBehaviour
                 pickupText.color = new Color(pickupText.color.r, pickupText.color.g, pickupText.color.b, Mathf.Lerp(1, 0, t));
                 yield return null;
             }
+            //reset to false for next scalpel?
+       // hasPickedUpScalpel = false;
         }
     }

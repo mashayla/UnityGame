@@ -31,9 +31,7 @@ public class KeyPickup : MonoBehaviour
                 StartCoroutine(FadeText());
                 // Set the flag to true to indicate the key has been picked up
                 hasPickedUpKey = true;
-                // Optionally, destroy the key object or deactivate it
-                Destroy(gameObject);
-
+              
             }
         }
     }
@@ -50,15 +48,16 @@ public class KeyPickup : MonoBehaviour
         }
 
         // Wait for 3 seconds
-        yield return new WaitForSeconds(3f);
-
+        //yield return new WaitForSeconds(3f);
+        Destroy(gameObject);
         // Fade out
-        fadeStartTime = Time.time;
-        while (pickupText.color.a > 0)
-        {
-            float t = (Time.time - fadeStartTime) / fadeDuration;
-            pickupText.color = new Color(pickupText.color.r, pickupText.color.g, pickupText.color.b, Mathf.Lerp(1, 0, t));
-            yield return null;
-        }
+      //  fadeStartTime = Time.time;
+      //  while (pickupText.color.a > 0)
+     //   {
+     //       float t = (Time.time - fadeStartTime) / fadeDuration;
+     //       pickupText.color = new Color(pickupText.color.r, pickupText.color.g, pickupText.color.b, Mathf.Lerp(1, 0, t));
+     //       yield return null;
+    //    }
+     
     }
 }
