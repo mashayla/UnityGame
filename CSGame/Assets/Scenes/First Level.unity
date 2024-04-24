@@ -5233,6 +5233,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1035464767207277277, guid: 188b0aae85bce07428aaaae4653bc78d, type: 3}
   m_PrefabInstance: {fileID: 494317164}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &495908374 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2961365871352684228, guid: 5ddb44fa2719bf7488890f005884e198, type: 3}
+  m_PrefabInstance: {fileID: 1855246563}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &503533462
 GameObject:
   m_ObjectHideFlags: 0
@@ -8237,6 +8242,10 @@ PrefabInstance:
     - target: {fileID: 5488533282498355972, guid: a17f40b85621348429719dbe73a62e68, type: 3}
       propertyPath: m_Name
       value: ZombieIdle
+      objectReference: {fileID: 0}
+    - target: {fileID: 6329445481461517170, guid: a17f40b85621348429719dbe73a62e68, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7786977257203040742, guid: a17f40b85621348429719dbe73a62e68, type: 3}
       propertyPath: target
@@ -25257,6 +25266,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 3111923423349790132}
     - target: {fileID: 8451282847447587196, guid: 188b0aae85bce07428aaaae4653bc78d, type: 3}
+      propertyPath: noPlayerSpot
+      value: 
+      objectReference: {fileID: 495908374}
+    - target: {fileID: 8451282847447587196, guid: 188b0aae85bce07428aaaae4653bc78d, type: 3}
       propertyPath: setupController
       value: 
       objectReference: {fileID: 2374203350644878591}
@@ -25567,6 +25580,10 @@ PrefabInstance:
       propertyPath: theInventory
       value: 
       objectReference: {fileID: 1499826441}
+    - target: {fileID: 2487784301293115857, guid: 310f713af94af224c992e5f9c72a4590, type: 3}
+      propertyPath: runSpeed
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 2487784301293115857, guid: 310f713af94af224c992e5f9c72a4590, type: 3}
       propertyPath: theStatusController
       value: 

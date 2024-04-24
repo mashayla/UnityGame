@@ -11,8 +11,8 @@ public class BedInteraction : MonoBehaviour
     public GameObject playerCapsulePos;
     public CharacterController setupController;
 
-    public Seeker enemySeeker; // Reference to the Seeker component on the player
-
+    public AIDestinationSetter enemyAIDestinationSetter; // Reference to the AIDestinationSetter component on the enemy
+    public GameObject noPlayerSpot;
 
     private bool isUnderBed = false;
     private Vector3 originalPlayerPosition;
@@ -45,11 +45,12 @@ public class BedInteraction : MonoBehaviour
 
         if (isUnderBed)
         {
-            
-
+         //   enemyAIDestinationSetter.target.position = hardcodedDestination;
             // Store the original Character Controller orientation
             originalControllerRotation = setupController.transform.rotation;
             originalControllerPosition = setupController.transform.position;
+
+         
 
             setupController.enabled = false;
     
@@ -57,19 +58,23 @@ public class BedInteraction : MonoBehaviour
             originalPlayerPosition = player.transform.position;
             originalCameraPosition = mainCamera.transform.position;
             originalPlayerCapsulePosition = playerCapsulePos.transform.position;
-            
+
+     
+
             // Move player to the camera position object
             player.transform.position = cameraPositionObject.transform.position;
             playerCapsulePos.transform.position = cameraPositionObject.transform.position;
             mainCamera.transform.position = cameraPositionObject.transform.position;
-
+            // Set the enemy's destination to a random position
+           
             // Temporarily hide the player model
             player.SetActive(false);
-            // Disable the Seeker to stop pathfinding
-            enemySeeker.enabled = false;
+            enemyAIDestinationSetter.target = noPlayerSpot.transform;
+
         }
         else
         {
+          //  enemyAIDestinationSetter.target = player.transform;
 
             // Restore the Character Controller's orientation
             setupController.transform.rotation = originalControllerRotation;
@@ -84,11 +89,25 @@ public class BedInteraction : MonoBehaviour
             // Ensure the Character Controller is aligned with the player model
             setupController.transform.position = player.transform.position;
 
+           
             // Make the player model visible again
             player.SetActive(true);
-            // Re-enable the enemy's Seeker component
-            enemySeeker.enabled = true;
+            enemyAIDestinationSetter.target = player.transform;
         }
+    }
+
+    void SetRandomDestination()
+    {
+        // Define the bounds of the area where the enemy can move (wheelchair)
+        Vector3 location = new Vector3(6.105612f, 0.6259766f, -2.631168f);
+
+        enemyAIDestinationSetter.target.position = location;
+        Debug.Log("Setting enemy destination to: " + location);
+    }
+    void ResetDestinationToPlayer()
+    {
+        // Set the enemy's destination back to the player
+        enemyAIDestinationSetter.target = player.transform;
     }
 }
 
