@@ -35,6 +35,6 @@ public class KeySpawner : MonoBehaviour
         Vector3 randomPosition = predefinedPositions[randomIndex];
 
         // Set the key's position to the randomly selected position
-        key.transform.position = randomPosition;
+        rusty_key.transform.position = randomPosition;
     }
 }
