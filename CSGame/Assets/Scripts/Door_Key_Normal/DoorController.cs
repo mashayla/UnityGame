@@ -1,10 +1,11 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
 using UnityEngine;
 
 public class DoorController : MonoBehaviour
 {
-    public Transform Enemy; // Reference to the enemy
-    public float openDistance = 5f; // Distance at which the door opens
-
     public float openAngle = 90f; // The angle at which the door is fully open
     public float closeSpeed = 2f; // Speed at which the door closes
     public float openSpeed = 2f; // Speed at which the door opens
@@ -26,21 +27,6 @@ public class DoorController : MonoBehaviour
 
     void Update()
     {
-        // Distance to the enemy
-        float distance = Vector3.Distance(Enemy.position, transform.position);
-
-        // If the enemy is within the open distance
-        if (distance <= openDistance)
-        {
-            // Open the door
-            isOpen = true;
-        }
-        else
-        {
-            // Close the door
-            isOpen = false;
-        }
-
         // If the door is supposed to be open
         if (isOpen)
         {
@@ -59,6 +45,7 @@ public class DoorController : MonoBehaviour
         transform.eulerAngles = new Vector3(transform.eulerAngles.x, currentAngle, transform.eulerAngles.z);
     }
 
+    // Call this method to toggle the door's open state
     public void ToggleDoor()
     {
         isOpen = !isOpen;
