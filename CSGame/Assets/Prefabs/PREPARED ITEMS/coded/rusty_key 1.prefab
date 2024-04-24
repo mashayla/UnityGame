@@ -118,6 +118,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7704769894386691976, guid: 311673173a5d5aa47b45dd5dd6ee4db9, type: 3}
       insertIndex: -1
       addedObject: {fileID: 8386194791361922089}
+    - targetCorrespondingSourceObject: {fileID: 7704769894386691976, guid: 311673173a5d5aa47b45dd5dd6ee4db9, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7928778068466101152}
   m_SourcePrefab: {fileID: 100100000, guid: 311673173a5d5aa47b45dd5dd6ee4db9, type: 3}
 --- !u!4 &6607987985236933575 stripped
 Transform:
@@ -144,6 +147,8 @@ MonoBehaviour:
   keyDoorController: {fileID: 0}
   pickupDistance: 4
   player: {fileID: 0}
+  pickupText: {fileID: 0}
+  fadeDuration: 1
 --- !u!65 &8386194791361922089
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -165,3 +170,15 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.12193201, y: 0.039105855, z: 0.23262405}
   m_Center: {x: 0, y: -9.313226e-10, z: 0.0000000037252903}
+--- !u!114 &7928778068466101152
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7921572084571851220}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5cfa921b1dda44e8986b1bf127211eb0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
