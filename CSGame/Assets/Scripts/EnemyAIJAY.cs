@@ -1,57 +1,67 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class EnemyAIJAY : MonoBehaviour
 {
     public float lookRadius = 10f;  // Detection range for player
     public float attackRadius = 5f; // Attack range
+    public float radiusIncreaseInterval = 30f; // Interval to increase the lookRadius
+    public float radiusIncreaseAmount = 1f; // Amount to increase the lookRadius
+
+    public Transform[] patrolPoints; // Array of patrol points
+    private int currentPatrolIndex = 0; // Current patrol point index
+
+    public float waitTime = 3f; // Time to wait at each patrol point
+    private bool isWaiting = false; // Flag to check if the enemy is waiting
 
     Transform target;  // Reference to the player
-    UnityEngine.AI.NavMeshAgent agent; // Reference to the NavMeshAgent
+    NavMeshAgent agent; // Reference to the NavMeshAgent
 
     void Start()
     {
         target = PlayerController.instance.playerCamera.transform;
-        agent = GetComponent<UnityEngine.AI.NavMeshAgent>();
+        agent = GetComponent<NavMeshAgent>();
+
+        // Start the IncreaseLookRadius coroutine
+        StartCoroutine(IncreaseLookRadius());
     }
 
     void Update()
+{
+    // Check if the agent has reached its destination
+    if (!agent.pathPending && agent.remainingDistance <= agent.stoppingDistance)
     {
-        // Distance to the player
-        float distance = Vector3.Distance(target.position, transform.position);
-
-        // If inside the lookRadius
-        if (distance <= lookRadius)
+        // If at the current patrol point, move to the next one
+        if (agent.remainingDistance <= agent.stoppingDistance)
         {
-            // Move towards the player
-            agent.SetDestination(target.position);
-
-            // If within attacking distance
-            if (distance <= attackRadius)
-            {
-                // Attack the player
-                // Add your attack code here
-                Debug.Log("Attack the player");
-            }
+            currentPatrolIndex = (currentPatrolIndex + 1) % patrolPoints.Length;
+            agent.SetDestination(patrolPoints[currentPatrolIndex].position);
         }
-        else
+    }
+    else
+    {
+        // If not at the current patrol point, continue moving towards it
+        agent.SetDestination(patrolPoints[currentPatrolIndex].position);
+    }
+}
+    // Coroutine to increase the lookRadius
+    IEnumerator IncreaseLookRadius()
+    {
+        while (true)
         {
-            // Move around randomly
-            Vector3 randomDirection = Random.insideUnitSphere * lookRadius;
-            randomDirection += transform.position;
-            UnityEngine.AI.NavMeshHit hit;
-            UnityEngine.AI.NavMesh.SamplePosition(randomDirection, out hit, lookRadius, 1);
-            agent.SetDestination(hit.position);
+            yield return new WaitForSeconds(radiusIncreaseInterval);
+            lookRadius += radiusIncreaseAmount;
         }
     }
 
-    // Show the lookRadius in editor
-    void OnDrawGizmosSelected()
+    // Coroutine to wait for a specified duration and then go to the next patrol point
+    IEnumerator WaitAndGo()
     {
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(transform.position, lookRadius);
-        Gizmos.color = Color.blue;
-        Gizmos.DrawWireSphere(transform.position, attackRadius);
+        isWaiting = true;
+        yield return new WaitForSeconds(waitTime);
+        currentPatrolIndex = (currentPatrolIndex + 1) % patrolPoints.Length;
+        agent.SetDestination(patrolPoints[currentPatrolIndex].position);
+        isWaiting = false;
     }
 }
