@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 using System;
 using UnityEngine.TestTools;
 
@@ -8,3 +9,15 @@ namespace UnityEditor.TestTools.TestRunner
         public PrebuildSetupAttributeFinder() : base(attribute => attribute.TargetClass) {}
     }
 }
+=======
+using System;
+using UnityEngine.TestTools;
+
+namespace UnityEditor.TestTools.TestRunner
+{
+    internal class PrebuildSetupAttributeFinder : AttributeFinderBase<IPrebuildSetup, PrebuildSetupAttribute>
+    {
+        public PrebuildSetupAttributeFinder() : base(attribute => attribute.TargetClass) {}
+    }
+}
+>>>>>>> main

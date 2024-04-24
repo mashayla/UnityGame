@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 using System;
 
 namespace UnityEditor.TestTools.TestRunner.UnityTestProtocol
@@ -12,3 +13,19 @@ namespace UnityEditor.TestTools.TestRunner.UnityTestProtocol
         }
     }
 }
+=======
+using System;
+
+namespace UnityEditor.TestTools.TestRunner.UnityTestProtocol
+{
+    [Serializable]
+    internal class PlayerSystemInfoMessage : Message
+    {
+        public PlayerSystemInfo PlayerSystemInfo;
+        public PlayerSystemInfoMessage()
+        {
+            type = "PlayerSystemInfo";
+        }
+    }
+}
+>>>>>>> main

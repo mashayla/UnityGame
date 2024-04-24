@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 using System;
 
 namespace UnityEngine.TestRunner.NUnitExtensions.Runner
@@ -10,3 +11,17 @@ namespace UnityEngine.TestRunner.NUnitExtensions.Runner
         public bool strictDomainReload;
     }
 }
+=======
+using System;
+
+namespace UnityEngine.TestRunner.NUnitExtensions.Runner
+{
+    [Serializable]
+    internal class FeatureFlags
+    {
+        public bool fileCleanUpCheck;
+        public bool requiresSplashScreen;
+        public bool strictDomainReload;
+    }
+}
+>>>>>>> main

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 using NUnit.Framework;
 
 namespace Tests_3
@@ -10,4 +11,18 @@ namespace Tests_3
             
         }
     }
+=======
+using NUnit.Framework;
+
+namespace Tests_3
+{
+    internal class ValueOutputterTests
+    {
+        [Test]
+        public void YourTestGoesHere()
+        {
+            
+        }
+    }
+>>>>>>> main
 }

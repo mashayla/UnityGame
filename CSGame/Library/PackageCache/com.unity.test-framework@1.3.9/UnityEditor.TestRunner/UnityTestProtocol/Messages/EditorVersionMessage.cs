@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 using System;
 
 namespace UnityEditor.TestTools.TestRunner.UnityTestProtocol
@@ -10,3 +11,17 @@ namespace UnityEditor.TestTools.TestRunner.UnityTestProtocol
         }
     }
 }
+=======
+using System;
+
+namespace UnityEditor.TestTools.TestRunner.UnityTestProtocol
+{
+    internal class EditorVersionMessage : Message
+    {
+        public EditorVersionMessage()
+        {
+            type = "EditorVersion";
+        }
+    }
+}
+>>>>>>> main

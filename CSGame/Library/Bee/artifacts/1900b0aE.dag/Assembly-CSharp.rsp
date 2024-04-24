@@ -124,8 +124,15 @@
 -define:ENABLE_LEGACY_INPUT_MANAGER
 -define:TEXTCORE_FONT_ENGINE_1_5_OR_NEWER
 -define:TEXTCORE_TEXT_ENGINE_1_5_OR_NEWER
+<<<<<<< HEAD
 -define:CSHARP_7_OR_LATER
 -define:CSHARP_7_3_OR_NEWER
+=======
+-define:UNITY_POST_PROCESSING_STACK_V2
+-define:CSHARP_7_OR_LATER
+-define:CSHARP_7_3_OR_NEWER
+-r:"Assets/AstarPathfindingProject/Plugins/DotNetZip/Pathfinding.Ionic.Zip.Reduced.dll"
+>>>>>>> main
 -r:"C:/Program Files/Unity/Hub/Editor/2023.2.10f1/Editor/Data/Managed/UnityEngine/UnityEditor.AccessibilityModule.dll"
 -r:"C:/Program Files/Unity/Hub/Editor/2023.2.10f1/Editor/Data/Managed/UnityEngine/UnityEditor.AdaptivePerformanceModule.dll"
 -r:"C:/Program Files/Unity/Hub/Editor/2023.2.10f1/Editor/Data/Managed/UnityEngine/UnityEditor.CoreModule.dll"
@@ -361,10 +368,30 @@
 -r:"Library/PackageCache/com.unity.ext.nunit@2.0.5/net40/unity-custom/nunit.framework.dll"
 -r:"Library/PackageCache/com.unity.testtools.codecoverage@1.2.5/lib/ReportGenerator/ReportGeneratorMerged.dll"
 -r:"Library/PackageCache/com.unity.visualscripting@1.8.0/Runtime/VisualScripting.Flow/Dependencies/NCalc/Unity.VisualScripting.Antlr3.Runtime.dll"
+<<<<<<< HEAD
 -r:"Library/Bee/artifacts/1900b0aE.dag/Unity.2D.Sprite.Editor.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/Unity.EditorCoroutines.Editor.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/Unity.Performance.Profile-Analyzer.Editor.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/Unity.PlasticSCM.Editor.ref.dll"
+=======
+-r:"Library/Bee/artifacts/1900b0aE.dag/AstarPathfindingProject.ref.dll"
+-r:"Library/Bee/artifacts/1900b0aE.dag/AstarPathfindingProjectEditor.ref.dll"
+-r:"Library/Bee/artifacts/1900b0aE.dag/PackageToolsEditor.ref.dll"
+-r:"Library/Bee/artifacts/1900b0aE.dag/Unity.2D.Sprite.Editor.ref.dll"
+-r:"Library/Bee/artifacts/1900b0aE.dag/Unity.AI.Navigation.Editor.ConversionSystem.ref.dll"
+-r:"Library/Bee/artifacts/1900b0aE.dag/Unity.AI.Navigation.Editor.ref.dll"
+-r:"Library/Bee/artifacts/1900b0aE.dag/Unity.AI.Navigation.ref.dll"
+-r:"Library/Bee/artifacts/1900b0aE.dag/Unity.AI.Navigation.Updater.ref.dll"
+-r:"Library/Bee/artifacts/1900b0aE.dag/Unity.EditorCoroutines.Editor.ref.dll"
+-r:"Library/Bee/artifacts/1900b0aE.dag/Unity.Performance.Profile-Analyzer.Editor.ref.dll"
+-r:"Library/Bee/artifacts/1900b0aE.dag/Unity.PlasticSCM.Editor.ref.dll"
+-r:"Library/Bee/artifacts/1900b0aE.dag/Unity.Postprocessing.Editor.ref.dll"
+-r:"Library/Bee/artifacts/1900b0aE.dag/Unity.Postprocessing.Runtime.ref.dll"
+-r:"Library/Bee/artifacts/1900b0aE.dag/Unity.ProBuilder.AddOns.Editor.ref.dll"
+-r:"Library/Bee/artifacts/1900b0aE.dag/Unity.ProBuilder.AssetIdRemapUtility.ref.dll"
+-r:"Library/Bee/artifacts/1900b0aE.dag/Unity.ProBuilder.Editor.ref.dll"
+-r:"Library/Bee/artifacts/1900b0aE.dag/Unity.ProBuilder.ref.dll"
+>>>>>>> main
 -r:"Library/Bee/artifacts/1900b0aE.dag/Unity.Rider.Editor.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/Unity.TestTools.CodeCoverage.Editor.OpenCover.Model.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection.ref.dll"
@@ -387,12 +414,34 @@
 -analyzer:"C:/Program Files/Unity/Hub/Editor/2023.2.10f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.Properties.SourceGenerator.dll"
 -analyzer:"C:/Program Files/Unity/Hub/Editor/2023.2.10f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll"
 -analyzer:"C:/Program Files/Unity/Hub/Editor/2023.2.10f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.UIToolkit.SourceGenerator.dll"
+<<<<<<< HEAD
 "Assets/Scripts/ActionController.cs"
+=======
+"Assets/DoorInteraction.cs"
+"Assets/EnemyDoorInteraction.cs"
+"Assets/IdleBehaviour.cs"
+"Assets/PatrolBehavior.cs"
+"Assets/Scripts/ActionController.cs"
+"Assets/Scripts/Bed_Hide/BedInteraction.cs"
+"Assets/Scripts/Door_Key_Normal/DoorController.cs"
+"Assets/Scripts/Door_Key_Normal/DoorTrigger.cs"
+"Assets/Scripts/Door_Key_Normal/KeyDoorController.cs"
+"Assets/Scripts/Door_Key_Normal/KeyPickup.cs"
+"Assets/Scripts/EnemyAIJAY.cs"
+"Assets/Scripts/EnemyAIJAY2.cs"
+"Assets/Scripts/EnemyAttack.cs"
+"Assets/Scripts/EnemyMovement.cs"
+"Assets/Scripts/Flicker.cs"
+"Assets/Scripts/FootstepSounds.cs"
+"Assets/Scripts/Interact/HideUnderBed.cs"
+"Assets/Scripts/Interact/ItemInteraction.cs"
+>>>>>>> main
 "Assets/Scripts/Inventory.cs"
 "Assets/Scripts/Item.cs"
 "Assets/Scripts/ItemPickUp.cs"
 "Assets/Scripts/Jay Scripts/cameralocation.cs"
 "Assets/Scripts/Jay Scripts/moveCamera.cs"
+<<<<<<< HEAD
 "Assets/Scripts/MainMenu/MenuQuit.cs"
 "Assets/Scripts/Player/1st Player Camera.cs"
 "Assets/Scripts/Player/Animations.cs"
@@ -400,6 +449,28 @@
 "Assets/Scripts/Player/Player Animations.cs"
 "Assets/Scripts/Player/PlayerMovement.cs"
 "Assets/Scripts/Slots.cs"
+=======
+"Assets/Scripts/KeySpawn.cs"
+"Assets/Scripts/MainMenu/BrightnessSetting.cs"
+"Assets/Scripts/MainMenu/GameStart.cs"
+"Assets/Scripts/MainMenu/MenuQuit.cs"
+"Assets/Scripts/MainMenu/PauseMenu.cs"
+"Assets/Scripts/MainMenu/SensitivitySetting.cs"
+"Assets/Scripts/MainMenu/SoundSettings.cs"
+"Assets/Scripts/PickUps/MedicinePickUp.cs"
+"Assets/Scripts/PickUps/ScalpelPickup.cs"
+"Assets/Scripts/Player/Animations.cs"
+"Assets/Scripts/Player/Old scripts/1st Player Camera.cs"
+"Assets/Scripts/Player/Old scripts/MoveCamera.cs"
+"Assets/Scripts/Player/Old scripts/Player Animations.cs"
+"Assets/Scripts/Player/Old scripts/PlayerMovement.cs"
+"Assets/Scripts/Player/PlayerController.cs"
+"Assets/Scripts/Player2.cs"
+"Assets/Scripts/Slots.cs"
+"Assets/Scripts/StatusController.cs"
+"Assets/Scripts/Timer.cs"
+"Assets/Scripts/Weapon.cs"
+>>>>>>> main
 "Assets/TextMesh Pro/Examples & Extras/Scripts/Benchmark01.cs"
 "Assets/TextMesh Pro/Examples & Extras/Scripts/Benchmark01_UGUI.cs"
 "Assets/TextMesh Pro/Examples & Extras/Scripts/Benchmark02.cs"

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 using System;
 
 namespace UnityEditor.TestTools.TestRunner.GUI
@@ -7,3 +8,14 @@ namespace UnityEditor.TestTools.TestRunner.GUI
         void OpenAssetInItsDefaultExternalEditor(string assetPath, int line);
     }
 }
+=======
+using System;
+
+namespace UnityEditor.TestTools.TestRunner.GUI
+{
+    internal interface IAssetsDatabaseHelper
+    {
+        void OpenAssetInItsDefaultExternalEditor(string assetPath, int line);
+    }
+}
+>>>>>>> main

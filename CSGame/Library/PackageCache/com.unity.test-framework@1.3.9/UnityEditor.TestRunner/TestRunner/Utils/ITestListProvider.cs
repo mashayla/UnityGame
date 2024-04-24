@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 using System;
 using System.Collections.Generic;
 using NUnit.Framework.Interfaces;
@@ -10,3 +11,17 @@ namespace UnityEditor.TestTools.TestRunner
         IEnumerator<ITest> GetTestListAsync(TestPlatform platform);
     }
 }
+=======
+using System;
+using System.Collections.Generic;
+using NUnit.Framework.Interfaces;
+using UnityEngine.TestTools;
+
+namespace UnityEditor.TestTools.TestRunner
+{
+    internal interface ITestListProvider
+    {
+        IEnumerator<ITest> GetTestListAsync(TestPlatform platform);
+    }
+}
+>>>>>>> main

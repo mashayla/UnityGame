@@ -1,0 +1,84 @@
+{
+  "version": 3,
+  "targets": {
+    ".NETStandard,Version=v2.1": {
+      "AstarPathfindingProject/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.1",
+        "compile": {
+          "bin/placeholder/AstarPathfindingProject.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/AstarPathfindingProject.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "AstarPathfindingProject/1.0.0": {
+      "type": "project",
+      "path": "AstarPathfindingProject.csproj",
+      "msbuildProject": "AstarPathfindingProject.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    ".NETStandard,Version=v2.1": [
+      "AstarPathfindingProject >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\hjh56\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\hjh56\\OneDrive\\바탕 화면\\Project4900\\UnityGame\\CSGame\\PackageToolsEditor.csproj",
+      "projectName": "PackageToolsEditor",
+      "projectPath": "C:\\Users\\hjh56\\OneDrive\\바탕 화면\\Project4900\\UnityGame\\CSGame\\PackageToolsEditor.csproj",
+      "packagesPath": "C:\\Users\\hjh56\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\hjh56\\OneDrive\\바탕 화면\\Project4900\\UnityGame\\CSGame\\Temp\\obj\\Debug\\PackageToolsEditor\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\hjh56\\AppData\\Roaming\\NuGet\\NuGet.Config"
+      ],
+      "originalTargetFrameworks": [
+        "netstandard2.1"
+      ],
+      "sources": {
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "projectReferences": {
+            "C:\\Users\\hjh56\\OneDrive\\바탕 화면\\Project4900\\UnityGame\\CSGame\\AstarPathfindingProject.csproj": {
+              "projectPath": "C:\\Users\\hjh56\\OneDrive\\바탕 화면\\Project4900\\UnityGame\\CSGame\\AstarPathfindingProject.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "netstandard2.1": {
+        "targetAlias": "netstandard2.1",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101\\RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

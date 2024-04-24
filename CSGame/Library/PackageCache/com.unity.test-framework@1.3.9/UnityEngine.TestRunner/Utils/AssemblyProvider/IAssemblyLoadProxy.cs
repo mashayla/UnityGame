@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 using System;
 
 namespace UnityEngine.TestTools.Utils
@@ -7,3 +8,14 @@ namespace UnityEngine.TestTools.Utils
         IAssemblyWrapper Load(string assemblyString);
     }
 }
+=======
+using System;
+
+namespace UnityEngine.TestTools.Utils
+{
+    internal interface IAssemblyLoadProxy
+    {
+        IAssemblyWrapper Load(string assemblyString);
+    }
+}
+>>>>>>> main

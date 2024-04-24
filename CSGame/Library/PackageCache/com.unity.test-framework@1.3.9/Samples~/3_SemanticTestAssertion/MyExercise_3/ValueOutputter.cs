@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 using System.Linq;
 
 namespace MyExercise_3
@@ -19,4 +20,27 @@ namespace MyExercise_3
             return 19f + (1f/3f);
         }
     }
+=======
+using System.Linq;
+
+namespace MyExercise_3
+{
+    public class ValueOutputter
+    {
+        public string GetString()
+        {
+            return "A string to be asserted on";
+        }
+        
+        public int GetInt()
+        {
+            return 11;
+        }
+        
+        public float GetFloat()
+        {
+            return 19f + (1f/3f);
+        }
+    }
+>>>>>>> main
 }

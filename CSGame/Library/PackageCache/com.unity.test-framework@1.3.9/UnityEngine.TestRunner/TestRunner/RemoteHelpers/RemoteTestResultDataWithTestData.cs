@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 using System;
 
 namespace UnityEngine.TestRunner.TestLaunchers
@@ -9,3 +10,16 @@ namespace UnityEngine.TestRunner.TestLaunchers
         public RemoteTestData[] tests;
     }
 }
+=======
+using System;
+
+namespace UnityEngine.TestRunner.TestLaunchers
+{
+    [Serializable]
+    internal class RemoteTestResultDataWithTestData
+    {
+        public RemoteTestResultData[] results;
+        public RemoteTestData[] tests;
+    }
+}
+>>>>>>> main

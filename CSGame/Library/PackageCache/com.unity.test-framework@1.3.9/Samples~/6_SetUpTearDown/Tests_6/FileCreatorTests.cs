@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 using NUnit.Framework;
 
 namespace Tests_6
@@ -10,4 +11,18 @@ namespace Tests_6
             
         }
     }
+=======
+using NUnit.Framework;
+
+namespace Tests_6
+{
+    internal class FileCreatorTests
+    {
+        [Test]
+        public void YourTestGoesHere()
+        {
+            
+        }
+    }
+>>>>>>> main
 }

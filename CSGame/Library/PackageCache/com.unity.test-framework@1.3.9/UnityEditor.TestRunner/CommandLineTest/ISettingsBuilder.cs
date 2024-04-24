@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 using System;
 
 namespace UnityEditor.TestTools.TestRunner.CommandLineTest
@@ -8,3 +9,15 @@ namespace UnityEditor.TestTools.TestRunner.CommandLineTest
         ExecutionSettings BuildExecutionSettings(string[] commandLineArgs);
     }
 }
+=======
+using System;
+
+namespace UnityEditor.TestTools.TestRunner.CommandLineTest
+{
+    internal interface ISettingsBuilder
+    {
+        Api.ExecutionSettings BuildApiExecutionSettings(string[] commandLineArgs);
+        ExecutionSettings BuildExecutionSettings(string[] commandLineArgs);
+    }
+}
+>>>>>>> main

@@ -3,8 +3,13 @@
 
 ## [3.0.27] - 2023-11-30
 
+<<<<<<< HEAD
 - Restore the ability to select Rider installation from the custom location
 - Fix possible extra project regeneration on moving focus from Rider to Unity
+=======
+- Restore the ability to select Rider installation from the custom location
+- Fix possible extra project regeneration on moving focus from Rider to Unity
+>>>>>>> main
 - Improve performance of code generation for very large projects
 
 

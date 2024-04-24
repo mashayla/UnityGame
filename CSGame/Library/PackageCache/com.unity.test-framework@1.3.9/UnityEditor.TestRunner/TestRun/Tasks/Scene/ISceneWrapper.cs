@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 using System;
 
 namespace UnityEditor.TestTools.TestRunner.TestRun.Tasks.Scene
@@ -9,3 +10,16 @@ namespace UnityEditor.TestTools.TestRunner.TestRun.Tasks.Scene
         string path { get; }
     }
 }
+=======
+using System;
+
+namespace UnityEditor.TestTools.TestRunner.TestRun.Tasks.Scene
+{
+    internal interface ISceneWrapper
+    {
+        UnityEngine.SceneManagement.Scene WrappedScene { get; }
+        bool isDirty { get; }
+        string path { get; }
+    }
+}
+>>>>>>> main

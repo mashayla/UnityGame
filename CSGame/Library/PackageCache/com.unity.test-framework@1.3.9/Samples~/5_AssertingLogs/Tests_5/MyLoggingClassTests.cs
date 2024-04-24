@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 using NUnit.Framework;
 
 namespace Tests_5
@@ -10,4 +11,18 @@ namespace Tests_5
             
         }
     }
+=======
+using NUnit.Framework;
+
+namespace Tests_5
+{
+    internal class MyLoggingClassTests
+    {
+        [Test]
+        public void YourTestGoesHere()
+        {
+            
+        }
+    }
+>>>>>>> main
 }

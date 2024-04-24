@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 namespace UnityEngine.SettingsManagement.EditorTests
 {
 	public class SettingsTestBase
@@ -5,3 +6,12 @@ namespace UnityEngine.SettingsManagement.EditorTests
 		public const string k_PackageName = "com.unity.settings-manager.tests";
 	}
 }
+=======
+namespace UnityEngine.SettingsManagement.EditorTests
+{
+	public class SettingsTestBase
+	{
+		public const string k_PackageName = "com.unity.settings-manager.tests";
+	}
+}
+>>>>>>> main

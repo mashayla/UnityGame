@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 using NUnit.Framework;
 
 namespace Tests_2
@@ -10,4 +11,18 @@ namespace Tests_2
             
         }
     }
+=======
+using NUnit.Framework;
+
+namespace Tests_2
+{
+    internal class StringFormatterTests
+    {
+        [Test]
+        public void YourTestGoesHere()
+        {
+            
+        }
+    }
+>>>>>>> main
 }
