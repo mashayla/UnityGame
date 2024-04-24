@@ -250,6 +250,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 370527171}
     - target: {fileID: 8010582511305050784, guid: 033951ce8f570b54290f581a311ce86e, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 192201033}
+    - target: {fileID: 8010582511305050784, guid: 033951ce8f570b54290f581a311ce86e, type: 3}
       propertyPath: openDistance
       value: 3
       objectReference: {fileID: 0}
@@ -5657,7 +5661,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8010582511305050784, guid: 033951ce8f570b54290f581a311ce86e, type: 3}
   m_PrefabInstance: {fileID: 296448572}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1520674528}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3c4d0d051dd79254c9ead8b6562f1a55, type: 3}
@@ -5889,6 +5893,10 @@ PrefabInstance:
       propertyPath: Enemy
       value: 
       objectReference: {fileID: 370527171}
+    - target: {fileID: 8010582511305050784, guid: 033951ce8f570b54290f581a311ce86e, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 192201033}
     - target: {fileID: 8010582511305050784, guid: 033951ce8f570b54290f581a311ce86e, type: 3}
       propertyPath: openDistance
       value: 3
@@ -24470,6 +24478,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 370527171}
     - target: {fileID: 8010582511305050784, guid: 033951ce8f570b54290f581a311ce86e, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 192201033}
+    - target: {fileID: 8010582511305050784, guid: 033951ce8f570b54290f581a311ce86e, type: 3}
       propertyPath: openDistance
       value: 3
       objectReference: {fileID: 0}
@@ -28165,6 +28177,7 @@ Transform:
   - {fileID: 2011998812}
   - {fileID: 68804725}
   - {fileID: 1611339054}
+  - {fileID: 1786974951}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1417351437 stripped
@@ -30261,16 +30274,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 370527171}
     - target: {fileID: 8010582511305050784, guid: 033951ce8f570b54290f581a311ce86e, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 192201033}
+    - target: {fileID: 8010582511305050784, guid: 033951ce8f570b54290f581a311ce86e, type: 3}
       propertyPath: openDistance
       value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 6869816371602871985, guid: 033951ce8f570b54290f581a311ce86e, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 0}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 033951ce8f570b54290f581a311ce86e, type: 3}
 --- !u!1001 &1537310457
 PrefabInstance:
@@ -35104,6 +35118,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 7985372856768392086, guid: d076abac52e6ad043a63364e78546ec9, type: 3}
   m_PrefabInstance: {fileID: 1068523565}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1786974951 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4758691855269022061, guid: 033951ce8f570b54290f581a311ce86e, type: 3}
+  m_PrefabInstance: {fileID: 1535456553}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &1791172248 stripped
 Transform:
