@@ -1,3 +1,4 @@
+using Pathfinding;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,11 +11,11 @@ public class BedInteraction : MonoBehaviour
     public GameObject playerCapsulePos;
     public CharacterController setupController;
 
+    public Seeker enemySeeker; // Reference to the Seeker component on the player
 
 
     private bool isUnderBed = false;
     private Vector3 originalPlayerPosition;
-  
     private Vector3 originalCameraPosition;
     private Quaternion originalControllerRotation;
     private Vector3 originalControllerPosition;
@@ -44,6 +45,8 @@ public class BedInteraction : MonoBehaviour
 
         if (isUnderBed)
         {
+            
+
             // Store the original Character Controller orientation
             originalControllerRotation = setupController.transform.rotation;
             originalControllerPosition = setupController.transform.position;
@@ -62,6 +65,8 @@ public class BedInteraction : MonoBehaviour
 
             // Temporarily hide the player model
             player.SetActive(false);
+            // Disable the Seeker to stop pathfinding
+            enemySeeker.enabled = false;
         }
         else
         {
@@ -81,6 +86,8 @@ public class BedInteraction : MonoBehaviour
 
             // Make the player model visible again
             player.SetActive(true);
+            // Re-enable the enemy's Seeker component
+            enemySeeker.enabled = true;
         }
     }
 }
