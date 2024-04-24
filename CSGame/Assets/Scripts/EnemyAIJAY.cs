@@ -29,20 +29,30 @@ public class EnemyAIJAY : MonoBehaviour
 
     void Update()
 {
-    // Check if the agent has reached its destination
-    if (!agent.pathPending && agent.remainingDistance <= agent.stoppingDistance)
+    // Distance to the target
+    float distance = Vector3.Distance(target.position, transform.position);
+
+    // If inside the lookRadius
+    if (distance <= lookRadius)
     {
-        // If at the current patrol point, move to the next one
-        if (agent.remainingDistance <= agent.stoppingDistance)
+        // Move towards the target
+        agent.SetDestination(target.position);
+
+        // If within attacking distance
+        if (distance <= attackRadius)
         {
-            currentPatrolIndex = (currentPatrolIndex + 1) % patrolPoints.Length;
-            agent.SetDestination(patrolPoints[currentPatrolIndex].position);
+            // Attack the target
+            // Add your attack logic here
         }
     }
     else
     {
-        // If not at the current patrol point, continue moving towards it
-        agent.SetDestination(patrolPoints[currentPatrolIndex].position);
+        // Check if the agent has reached its destination
+        if (!agent.pathPending && agent.remainingDistance <= agent.stoppingDistance && !isWaiting)
+        {
+            // Start the WaitAndGo coroutine
+            StartCoroutine(WaitAndGo());
+        }
     }
 }
     // Coroutine to increase the lookRadius
