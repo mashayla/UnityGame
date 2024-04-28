@@ -12,7 +12,7 @@ public class PlayerController : MonoBehaviour
     public float jumpPower = 7f;
     public float gravity = 10f;
 
-    public int maxHP = 100; // Maximum HP
+    public int maxHP = 1000; // Maximum HP
     private int currentHP; // Current HP 
     public bool hasPills = false; // Flag to check if the player has pills
 

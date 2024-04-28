@@ -9,7 +9,7 @@ public class EnemyAIJAY : MonoBehaviour
     public float radiusIncreaseInterval = 30f; // Interval to increase the lookRadius
     public float radiusIncreaseAmount = 1f; // Amount to increase the lookRadius
     public float obstacleDistance = 10f; // Distance at which the enemy detects an obstacle
-    public float damagePercentage = 0.5f; // Damage percentage
+    public float damagePercentage = 0.3f; // Damage percentage
 
     public Transform[] patrolPoints; // Array of patrol points
     private int currentPatrolIndex = 0; // Current patrol point index
@@ -23,7 +23,7 @@ public class EnemyAIJAY : MonoBehaviour
 
     void Start()
     {
-        target = PlayerController.instance.playerCamera.transform;
+        target = PlayerController.instance.transform;
         agent = GetComponent<NavMeshAgent>();
         playerController = PlayerController.instance; // Assuming PlayerController is a singleton
 
@@ -32,43 +32,12 @@ public class EnemyAIJAY : MonoBehaviour
     }
 
     void Update()
+{
+    // Check if the player is within the lookRadius
+    if (Vector3.Distance(transform.position, target.position) <= lookRadius)
     {
-        // Check if the player is within the lookRadius
-        if (Vector3.Distance(transform.position, target.position) <= lookRadius)
-        {
-            // Player detected, follow the player
-            agent.SetDestination(target.position);
-        }
-        else
-        {
-            // Player not detected, patrol
-            if (!agent.pathPending && agent.remainingDistance <= agent.stoppingDistance)
-            {
-                // If at the current patrol point, move to the next one
-                if (agent.remainingDistance <= agent.stoppingDistance)
-                {
-                    currentPatrolIndex = (currentPatrolIndex + 1) % patrolPoints.Length;
-                    agent.SetDestination(patrolPoints[currentPatrolIndex].position);
-                }
-            }
-            else
-            {
-                // If not at the current patrol point, continue moving towards it
-                agent.SetDestination(patrolPoints[currentPatrolIndex].position);
-            }
-        }
-
-        // Wall detection and avoidance
-        RaycastHit hit;
-        if (Physics.Raycast(transform.position, transform.forward, out hit, obstacleDistance))
-        {
-            // If the raycast hits a wall
-            if (hit.collider.CompareTag("Wall"))
-            {
-                // Rotate to a random direction
-                transform.Rotate(0, Random.Range(0, 90), 0);
-            }
-        }
+        // Player detected, follow the player
+        agent.SetDestination(target.position);
 
         // Attack mechanism
         if (Vector3.Distance(transform.position, target.position) <= attackRadius)
@@ -77,6 +46,28 @@ public class EnemyAIJAY : MonoBehaviour
             AttackPlayer();
         }
     }
+    else
+    {
+        // Player not detected, patrol
+        if (!isWaiting && !agent.pathPending && agent.remainingDistance <= agent.stoppingDistance)
+        {
+            // If at the current patrol point, wait and then move to the next one
+            StartCoroutine(WaitAndGo());
+        }
+    }
+
+    // Wall detection and avoidance
+    RaycastHit hit;
+    if (Physics.Raycast(transform.position, transform.forward, out hit, obstacleDistance))
+    {
+        // If the raycast hits a wall
+        if (hit.collider.CompareTag("Wall"))
+        {
+            // Rotate to a random direction
+            transform.Rotate(0, Random.Range(0, 90), 0);
+        }
+    }
+}
 
     void AttackPlayer()
     {

@@ -6781,6 +6781,10 @@ PrefabInstance:
       value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 2487784301293115857, guid: 310f713af94af224c992e5f9c72a4590, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2487784301293115857, guid: 310f713af94af224c992e5f9c72a4590, type: 3}
       propertyPath: theStatusController
       value: 
       objectReference: {fileID: 396069631}
@@ -6827,7 +6831,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 950246644482507290, guid: 310f713af94af224c992e5f9c72a4590, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1891111748}
   m_SourcePrefab: {fileID: 100100000, guid: 310f713af94af224c992e5f9c72a4590, type: 3}
 --- !u!1001 &334154108
 PrefabInstance:
@@ -7542,6 +7549,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -9177178353865843479, guid: 8e827cc795118e04496092b101eab125, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 50a38ee22d6e49b4a8f18cfc9e665c3f, type: 2}
     - target: {fileID: -8679921383154817045, guid: 8e827cc795118e04496092b101eab125, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.17
@@ -7594,6 +7605,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -8366038275008457433, guid: 8e827cc795118e04496092b101eab125, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 873031b42913f0745b5af27b5d4e9ae0, type: 2}
+    - target: {fileID: -7431312813490636287, guid: 8e827cc795118e04496092b101eab125, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 10e42f3e071bf2848bf15f91e5fcbaf1, type: 2}
+    - target: {fileID: -3115745708279800447, guid: 8e827cc795118e04496092b101eab125, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 7ccae9b470e27794cb1fcd76ef690619, type: 2}
+    - target: {fileID: -1442552742255596080, guid: 8e827cc795118e04496092b101eab125, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 82ab5a6db34628c4d80f6e589cf317ff, type: 2}
     - target: {fileID: 919132149155446097, guid: 8e827cc795118e04496092b101eab125, type: 3}
       propertyPath: m_Name
       value: Zombie
@@ -7602,6 +7629,26 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Enemy
       objectReference: {fileID: 0}
+    - target: {fileID: 1836851868252483592, guid: 8e827cc795118e04496092b101eab125, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 5754898c4533af74097b8c37c0886cca, type: 2}
+    - target: {fileID: 3125775446981243031, guid: 8e827cc795118e04496092b101eab125, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 10e42f3e071bf2848bf15f91e5fcbaf1, type: 2}
+    - target: {fileID: 7119962653358416824, guid: 8e827cc795118e04496092b101eab125, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 10e42f3e071bf2848bf15f91e5fcbaf1, type: 2}
+    - target: {fileID: 7807422727676355940, guid: 8e827cc795118e04496092b101eab125, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 10e42f3e071bf2848bf15f91e5fcbaf1, type: 2}
+    - target: {fileID: 8433722631124668571, guid: 8e827cc795118e04496092b101eab125, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 062d54aaa4ac9ee40851d4599c869f5b, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7629,13 +7676,13 @@ PrefabInstance:
       addedObject: {fileID: 370527170}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 8e827cc795118e04496092b101eab125, type: 3}
       insertIndex: -1
+      addedObject: {fileID: 370527167}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 8e827cc795118e04496092b101eab125, type: 3}
+      insertIndex: -1
       addedObject: {fileID: 370527169}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 8e827cc795118e04496092b101eab125, type: 3}
       insertIndex: -1
       addedObject: {fileID: 370527168}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 8e827cc795118e04496092b101eab125, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 370527167}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 8e827cc795118e04496092b101eab125, type: 3}
       insertIndex: -1
       addedObject: {fileID: 370527166}
@@ -7843,12 +7890,12 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 370527159}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 701bfc3fc15d8724594193cc5d274b9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damagePercentage: 0.5
+  damagePercentage: 0.3
 --- !u!114 &370527169
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7856,7 +7903,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 370527159}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 91363ab6f056d284d8e159f1e78d191d, type: 3}
   m_Name: 
@@ -7876,11 +7923,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lookRadius: 10
-  attackRadius: 5
+  attackRadius: 3
   radiusIncreaseInterval: 30
   radiusIncreaseAmount: 1
   obstacleDistance: 3
-  damagePercentage: 0.5
+  damagePercentage: 0.3
   patrolPoints:
   - {fileID: 953733458}
   - {fileID: 1663239264}
@@ -37237,7 +37284,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 333482321}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1873025281}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b28357e81d1121e41b9177ebe6f60d22, type: 3}
   m_Name: 
@@ -37247,6 +37294,30 @@ CharacterController:
   m_CorrespondingSourceObject: {fileID: 4947527633934978934, guid: 310f713af94af224c992e5f9c72a4590, type: 3}
   m_PrefabInstance: {fileID: 333482321}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1891111748
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1873025281}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b133473ab7d1a454ab5a35acfeed7867, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerCamera: {fileID: 144877137}
+  walkSpeed: 2
+  runSpeed: 4
+  jumpPower: 5
+  gravity: 10
+  maxHP: 1000
+  hasPills: 0
+  theStatusController: {fileID: 396069631}
+  lookSpeed: 2
+  lookXLimit: 45
+  canMove: 1
+  weapon: {fileID: 0}
 --- !u!4 &1891384261 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3336049380968849565, guid: 5ddb44fa2719bf7488890f005884e198, type: 3}
